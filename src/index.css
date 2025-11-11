@@ -1,0 +1,420 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =============================
+   UTILITIES (Tailwind layer)
+   ============================= */
+@layer utilities {
+  /* === Общий контейнер сайта === */
+  .site-frame {
+    max-width: 1480px;
+    margin-inline: auto;
+    padding-inline: 2.5rem;
+  }
+
+  /* === Текст справа от портрета (базовая типографика) === */
+  #hero-right p {
+    font-size: 1.12rem;
+    line-height: 1.7;
+    letter-spacing: 0.01em;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  @media (min-width: 1024px) {
+    #hero-right p { font-size: 1.15rem; }
+  }
+  @media (min-width: 1280px) {
+    #hero-right p { font-size: 1.18rem; }
+  }
+}
+
+/* =============================
+   ROOT & THEME TOKENS
+   ============================= */
+:root {
+  --color-cyan: rgb(0, 246, 255);
+  --color-blue: #00bfff;
+  --color-sky: #33ccff;
+  color-scheme: dark;
+}
+
+/* =============================
+   Neon helpers
+   ============================= */
+.neon-cyan {
+  color: var(--color-cyan);
+  text-shadow:
+    0 0 8px rgba(0, 246, 255, 0.6),
+    0 0 24px rgba(0, 246, 255, 0.35),
+    0 0 48px rgba(0, 246, 255, 0.15);
+}
+.neon-blue {
+  color: var(--color-blue);
+  text-shadow:
+    0 0 10px rgba(0, 191, 255, 0.55),
+    0 0 30px rgba(0, 191, 255, 0.3),
+    0 0 60px rgba(0, 191, 255, 0.15);
+}
+.neon-sky {
+  color: var(--color-sky);
+  text-shadow:
+    0 0 10px rgba(51, 204, 255, 0.5),
+    0 0 30px rgba(51, 204, 255, 0.25),
+    0 0 60px rgba(51, 204, 255, 0.1);
+}
+
+/* =============================
+   Header nav chip (single source of truth)
+   ============================= */
+@keyframes breathChip {
+  0% { box-shadow: inset 0 0 6px rgba(80, 220, 255, 0.25), 0 0 6px rgba(80, 220, 255, 0.2); }
+  50% { box-shadow: inset 0 0 10px rgba(80, 220, 255, 0.3), 0 0 14px rgba(80, 220, 255, 0.45); }
+  100% { box-shadow: inset 0 0 6px rgba(80, 220, 255, 0.25), 0 0 6px rgba(80, 220, 255, 0.2); }
+}
+
+.nav-chip {
+  color: #6fdcff;
+  font-family: "Corbel Light", sans-serif;
+  font-size: 1.06rem;
+  letter-spacing: 0.065em;
+  padding: 0.58rem 1.45rem;
+  border: 1px solid rgba(80, 220, 255, 0.4);
+  border-radius: 11px;
+  background: rgba(10, 35, 45, 0.35);
+  text-decoration: none;
+  box-shadow: inset 0 0 6px rgba(80, 220, 255, 0.25), 0 0 6px rgba(80, 220, 255, 0.2);
+  transition: all 0.4s ease;
+  animation: breathChip 3.8s ease-in-out infinite;
+}
+.nav-chip:hover {
+  color: #9eeaff;
+  border-color: rgba(80, 220, 255, 0.7);
+  background: rgba(10, 45, 55, 0.5);
+  box-shadow: inset 0 0 10px rgba(80, 220, 255, 0.3), 0 0 14px rgba(80, 220, 255, 0.45);
+  transform: translateY(-1px);
+}
+@media (prefers-reduced-motion: reduce) {
+  .nav-chip { animation: none !important; }
+}
+
+
+/* =============================
+   Background auras
+   ============================= */
+@keyframes pulseA { 0%{transform:scale(1) translate3d(0,0,0);opacity:.32;filter:blur(80px);} 50%{transform:scale(1.07) translate3d(2%,-2%,0);opacity:.42;filter:blur(90px);} 100%{transform:scale(1) translate3d(0,0,0);opacity:.32;filter:blur(80px);} }
+@keyframes pulseB { 0%{transform:scale(1) translate3d(0,0,0);opacity:.28;filter:blur(100px);} 50%{transform:scale(1.08) translate3d(-2%,2%,0);opacity:.38;filter:blur(110px);} 100%{transform:scale(1) translate3d(0,0,0);opacity:.28;filter:blur(100px);} }
+@keyframes drift  { 0%{transform:translate3d(0,0,0) scale(1);opacity:.22;} 50%{transform:translate3d(2%,-3%,0) scale(1.05);opacity:.28;} 100%{transform:translate3d(0,0,0) scale(1);opacity:.22;} }
+
+/* =============================
+   Portrait card
+   ============================= */
+.portrait-shell {
+  background: rgba(255, 255, 255, 0.01);
+  border: 1px solid rgba(0, 223, 255, 0.06);
+  border-radius: 1rem;
+  box-shadow: 0 0 22px rgba(0, 225, 255, 0.08);
+  overflow: hidden;
+  transition: box-shadow 0.35s ease, border-color 0.35s ease, background 0.35s ease;
+}
+.portrait-shell:hover {
+  background: rgba(0, 225, 255, 0.04);
+  border-color: rgba(0, 235, 255, 0.25);
+  box-shadow: 0 0 34px rgba(0, 236, 255, 0.22);
+}
+
+/* =============================
+   Manifest
+   ============================= */
+.manifest-label {
+  color: #29d6ff;
+  font-size: 1.35rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+  font-weight: 600;
+  text-shadow: 0 0 10px rgba(38, 207, 255, 0.35), 0 0 20px rgba(38, 207, 255, 0.15);
+}
+.manifest-title {
+  color: #29d6ff;
+  font-size: 1.9rem;
+  line-height: 1.25;
+  font-weight: 300;
+  margin-bottom: 1.2rem;
+  text-shadow: 0 0 10px rgba(38, 207, 255, 0.45), 0 0 20px rgba(38, 207, 255, 0.25);
+}
+.manifest-body {
+  color: rgba(200, 240, 255, 0.9);
+  font-size: 1.27rem;
+  line-height: 1.65;
+  margin-bottom: 1.2rem;
+  text-align: justify;
+  text-justify: inter-word;
+}
+.manifest-foot {
+  color: rgba(180, 245, 255, 0.78);
+  font-style: italic;
+  font-size: 1.2rem;
+  margin-top: 0.8rem;
+}
+
+/* =============================
+   Research Area cards
+   ============================= */
+#research {
+  max-width: 78%;
+  margin: 0 auto;
+  padding-top: 3rem;
+}
+#research h4 {
+  color: #29d6ff;
+  font-size: 1.28rem; /* исправлено: без пробела */
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  font-weight: 500;
+  text-shadow: 0 0 10px rgba(38, 207, 255, 0.35), 0 0 20px rgba(38, 207, 255, 0.15);
+}
+#research .card {
+  background: rgba(10, 25, 30, 0.45);
+  border: 1px solid rgba(41, 214, 255, 0.12);
+  border-radius: 0.9rem;
+  padding: 1.05rem 1.1rem;
+  transition: all 0.3s ease;
+}
+#research .card:hover {
+  border-color: rgba(41, 214, 255, 0.35);
+  box-shadow: 0 0 16px rgba(41, 214, 255, 0.18);
+  transform: translateY(-2px);
+}
+#research h5 {
+  color: rgba(41, 214, 255, 0.94);
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-bottom: 0.45rem;
+}
+#research p {
+  color: rgba(205, 245, 255, 0.8);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+/* =============================
+   Article page
+   ============================= */
+.article-page {
+  max-width: 1480px;
+  margin: 0 auto;
+  padding-inline: 2.5rem;
+}
+.article-shell {
+  /* не меняем display из JSX (сейчас flex), но задаём отступы/ограничения */
+  gap: 3.5rem;
+  padding-bottom: 4rem;
+}
+.article-body {
+  max-width: 54rem;
+  font-size: 1.08rem;
+  line-height: 1.75;
+  color: rgba(242, 252, 255, 0.9);
+  letter-spacing: -0.005em;
+  text-align: justify;
+  text-justify: inter-word;
+}
+.article-body p { margin-bottom: 1rem; }
+.article-body p:first-child {
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 400;
+}
+@media (max-width: 1100px) {
+  .article-body { text-align: left; }
+}
+
+/* =============================
+   Latest Articles
+   ============================= */
+#archive {
+  max-width: 1480px;
+  margin-inline: auto;
+  padding-inline: 2.5rem;
+  padding-block: 2.5rem;
+}
+#archive h4 { color: #29d6ff; }
+#archive .latest-row {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+#archive .latest-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  text-decoration: none;
+  color: rgba(200, 240, 255, 0.85);
+  font-size: 1.1rem;
+  transition: 0.25s ease;
+  white-space: nowrap;
+}
+#archive .latest-link::after {
+  content: "";
+  position: absolute;
+  bottom: -4px; left: 0;
+  width: 0; height: 1px;
+  background: rgba(41, 214, 255, 0.6);
+  transition: width 0.25s ease;
+}
+#archive .latest-link:hover { color: rgba(41, 214, 255, 1); }
+#archive .latest-link:hover::after { width: 100%; }
+@media (max-width: 720px) {
+  #archive { padding-inline: 1.2rem; }
+  #archive .latest-row { gap: 1.2rem; }
+  #archive .latest-link { white-space: normal; }
+}
+
+/* =============================
+   Footer
+   ============================= */
+.footer-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding-block: 1.8rem 2.3rem;
+  font-size: 1.1rem;
+  color: rgba(220, 240, 255, 0.55);
+}
+.footer-left p { margin-bottom: 0.35rem; }
+.footer-mail { color: rgba(41, 214, 255, 0.85); transition: 0.2s; }
+.footer-mail:hover { color: #ffffff; }
+.footer-center { text-align: center; white-space: nowrap; }
+.footer-created { letter-spacing: 0.04em; color: rgba(210, 245, 255, 0.75); }
+.footer-created span { color: #29d6ff; font-weight: 500; }
+.footer-right { display: flex; align-items: center; gap: 0.6rem; justify-content: flex-end; }
+.footer-link { color: rgba(220, 240, 255, 0.7); transition: 0.15s; font-size: 1.2rem; }
+.footer-link:hover { color: #ffffff; }
+.footer-dot { color: rgba(220, 240, 255, 0.7); font-weight: 300; }
+.footer-amp { color: rgba(210, 245, 255, 0.75); margin: 0 0.25rem; }
+@media (max-width: 900px) {
+  .footer-bar { flex-direction: column; align-items: flex-start; }
+  .footer-center { white-space: normal; text-align: left; }
+  .footer-right { flex-wrap: wrap; }
+}
+
+/* =============================
+   Global font (optional)
+   ============================= */
+body { font-family: 'Corbel Light', sans-serif; }
+
+
+/* =============================
+   Progressive enhancements (non-visual)
+   ============================= */
+html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; }
+
+/* Better text selection without changing palette dramatically */
+::selection { background: rgba(41,214,255,0.25); color: #eaffff; }
+
+/* Mobile tap comfort (no color change) */
+a, button { -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
+
+/* Focus visibility for keyboard users (keeps brand color) */
+.nav-chip:focus-visible { outline: 2px solid rgba(80, 220, 255, 0.6); outline-offset: 2px; }
+.footer-link:focus-visible, .footer-mail:focus-visible, #archive .latest-link:focus-visible { outline: 2px solid rgba(80, 220, 255, 0.6); outline-offset: 2px; }
+
+/* Respect reduced motion settings across all animated elements */
+@media (prefers-reduced-motion: reduce) {
+  /* existing chip animation already disabled above; also pause background auras set via inline styles */
+  [style*="pulseA"], [style*="pulseB"], [style*="drift"] { animation: none !important; }
+}
+
+/* Image safety: prevents accidental drag ghosting without affecting layout */
+img { -webkit-user-drag: none; user-select: none; }
+
+
+
+
+/* SYMBIOSIS article — одинаковый интервал между строками и абзацами */
+.article-body {
+  font-size: 1.125rem;   /* ~18px — комфорт для чтения */
+  line-height: 1.7;      /* единый межстрочный интервал */
+}
+
+@media (min-width: 1024px) {
+  .article-body { font-size: 1.2rem; }  /* ~19.2px на десктопах */
+}
+
+.article-body p {
+  margin-top: 0;         /* без доп. зазора сверху */
+  margin-bottom: 0;      /* без доп. зазора снизу */
+  text-indent: 1.5em;    /* «красная строка» у абзацев */
+}
+
+/* Ничего не меняем выше по файлу — этот блок внизу всё переопределит. */
+
+
+/* SYMBIOSIS — одинаковый интервал между строками и абзацами */
+.article-body {
+  font-size: 1.125rem;   /* ~18px */
+  line-height: 1.7;      /* единый межстрочный интервал */
+}
+
+@media (min-width: 1024px) {
+  .article-body { font-size: 1.2rem; } /* ~19.2px */
+}
+
+.article-body p {
+  margin: 0;             /* убираем внешние отступы у <p> */
+  text-indent: 1.5em;    /* красная строка */
+}
+
+/* ВАЖНО: гасим Tailwind `space-y-4` на контейнере .article-body */
+.article-body > * + * {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+
+/* === Только для статьи digital-spirituality-1 === */
+.ds1-wide .article-shell {
+  display: block;               /* вместо flex для двух колонок */
+}
+
+.ds1-wide .article-body {
+  max-width: none !important;   /* снять глобальное ограничение 54rem */
+  width: 100%;
+}
+
+/* на всякий случай — если где-то останется правая колонка */
+.ds1-wide .article-image {
+  display: none !important;
+}
+
+/* ROBOTS: тело статьи во всю ширину заголовка */
+.article-body.robots-wide { max-width: none !important; }
+
+
+
+/* Image with text wrap (left float) */
+.float-img-left{
+  float: left;
+  width: 260px;            /* подгон по скрину */
+  max-width: 46%;
+  margin: 0 1rem .6rem 0;  /* отступы от текста */
+  border-radius: 10px;
+}
+
+/* Мобильная адаптация — без обтекания */
+@media (max-width: 720px){
+  .float-img-left{
+    float: none;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0 1rem 0;
+  }
+}
+
+
