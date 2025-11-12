@@ -576,9 +576,6 @@ if (leftMatch || rightMatch) {
   );
 })}
 
-
-
-    
     
     </div>
 
@@ -601,10 +598,7 @@ if (leftMatch || rightMatch) {
     )}
   </div>
 
-
-
 )}
-
 
 
 <div className="mt-12 pt-6 border-t border-white/5 text-base text-white/100">
