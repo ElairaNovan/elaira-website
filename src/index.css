@@ -442,110 +442,37 @@ img {
 
 
 
-/* === ❌ Старый блок: горизонтальная прокрутка навигации (отключён, заменён Wave A) ===
+
+  /* Wave A — мобильная шапка (только мобильный, десктоп не трогаем) */
 @media (max-width: 820px) {
-  /* сам контейнер <nav aria-label="Primary"> */
-  header nav[aria-label="Primary"] {
-    display: flex;                 /* сохраняем flex */
-    flex-wrap: nowrap;             /* запрещаем перенос кнопок */
-    overflow-x: auto;              /* даём горизонтальный скролл */
-    -webkit-overflow-scrolling: touch;
-    gap: 0.5rem;                   /* чуть меньше расстояние между чипами */
-    white-space: nowrap;           /* на всякий случай */
-
-    /* аккуратные поля с учётом вырезов на iOS */
-    margin: 0 calc(-1 * 1rem);     /* “выпускаем” скролл на край экрана */
-    padding: 0.25rem max(1rem, env(safe-area-inset-right))
-             0.25rem max(1rem, env(safe-area-inset-left));
-
-    scroll-snap-type: x proximity; /* мягкое “прилипание” элементов */
-  }
-
-  /* скрываем полоску прокрутки именно у навигации */
-  header nav[aria-label="Primary"]::-webkit-scrollbar { display: none; }
-  header nav[aria-label="Primary"] { -ms-overflow-style: none; scrollbar-width: none; }
-
-  /* каждый чип — фиксированной ширины (не сжимается) и “прилипает” к началу */
-  header nav[aria-label="Primary"] > * {
-    flex: 0 0 auto;
-    scroll-snap-align: start;
-  }
-
-  /* чипы делаем компактнее на узких экранах — НЕ влияет на десктоп */
-  .nav-chip {
-    font-size: 0.98rem;
-    padding: 0.5rem 1rem;
-  }
-
-
-  /* === Wave A: Header + Hero Mobile Optimization === */
-
-/* HEADER */
-header {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 0.6rem; /* равномерное расстояние между элементами */
-  padding: 0.6rem 1rem;
-  overflow-x: hidden; /* убираем горизонтальную прокрутку */
-}
-
-header .logo {
-  margin-right: 0.8rem; /* немного воздуха справа от логотипа */
-}
-
-@media (max-width: 768px) {
-  header {
+  /* Внутренний контейнер хедера кладём в колонку */
+  header > div {
+    display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.8rem;
-    text-align: center;
+    gap: 0.75rem;
   }
 
-  header .logo {
-    margin-right: 0;
+  /* Логотип — чуть ниже и без отрицательного отступа */
+  header img[alt="Elaira Novan — Conscious Intelligence Mark"] {
     margin-bottom: 0.5rem;
   }
+  header .-ml-2 { margin-left: 0 !important; } /* гасим текущий -ml-2 на мобилке */
 
-  header nav {
+  /* Меню — перенос строк, центрирование, без горизонтального скролла */
+  header nav[aria-label="Primary"] {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 0.5rem;
-    width: 100%;
+    gap: 0.5rem 0.6rem;
+    overflow: visible;     /* убираем скролл */
   }
 
-  header nav a {
-    flex: 1 1 auto;
-    text-align: center;
-    min-width: 120px;
+  /* Чипы делаем компактнее, чтобы влезали в 1–2 строки */
+  header nav[aria-label="Primary"] .nav-chip {
+    font-size: 0.98rem;
+    padding: 0.5rem 1rem;
   }
-}
-
-/* HERO TEXT */
-.hero {
-  padding: 1.5rem 1rem;
-  text-align: center;
-}
-
-.hero h1 {
-  font-size: 2.2rem;
-  line-height: 1.2;
-}
-
-.hero p {
-  font-size: 1rem;
-  line-height: 1.4;
-  margin-top: 0.8rem;
-}
-
-/* HERO IMAGE (если есть) */
-.hero img {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  margin-top: 1rem;
 }
 
 
