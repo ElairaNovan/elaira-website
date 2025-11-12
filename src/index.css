@@ -443,41 +443,49 @@ img {
 
 
 
-  /* === Header: mobile-only layout (до 820px) === */
-@media (max-width: 820px){
-  /* Кнопки: превращаем nav в двухколоночную сетку */
-  header nav[aria-label="Primary"]{
+ /* === Mobile header: logo + 2-column nav (<=820px) === */
+@media (max-width: 820px) {
+  /* Внутренний контейнер хедера (тот, что с mx-auto) кладём в грид */
+  header > div.mx-auto {
+    display: grid !important;
+    grid-template-columns: auto 1fr; /* слева логотип, справа кнопки */
+    align-items: center;
+    column-gap: 14px;
+    row-gap: 8px;
+    padding-top: 10px; /* чуть больше воздуха */
+  }
+
+  /* Логотип — компактнее на узких экранах и без наезда */
+  header img[alt^="Elaira Novan"] {
+    max-width: 120px;
+    height: auto;
+    display: block;
+  }
+
+  /* Навигация: 2 колонки, без скролла и без nowrap */
+  header nav[aria-label="Primary"] {
     display: grid !important;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px 14px;               /* вертикаль / горизонталь */
-    margin-top: 12px;             /* «дыхание» под логотипом */
-    overflow: visible;            /* гарантировано без скролла */
+    gap: 10px 12px;          /* вертикальный и горизонтальный зазоры */
+    overflow: visible !important;
+    white-space: normal !important;
+    -webkit-overflow-scrolling: auto !important;
   }
 
-  /* Каждый чип занимает всю ширину своей ячейки, текст по центру */
-  header nav[aria-label="Primary"] .nav-chip{
-    width: 100%;
+  /* Кнопки — чуть компактнее и выравнивание по центру */
+  header nav[aria-label="Primary"] .nav-chip {
+    font-size: 1rem;
+    padding: 0.55rem 0.9rem;
     text-align: center;
-    font-size: 1rem;              /* чуть компактнее на телефонах */
-    padding: 0.6rem 1rem;
-    white-space: nowrap;          /* не ломаем слова внутри */
+    width: 100%;
   }
 
-  /* Сам логотип: фиксим возможные наложения и даём отступ вниз */
-  header img[alt="Elaira Novan — Conscious Intelligence Mark"]{
-    display: block;
-    margin-bottom: 8px;           /* расстояние от кнопок */
-    z-index: 1;
-  }
-}
-
-/* === Desktop safety (опционально, на всякий случай) === */
-@media (min-width: 821px){
-  header nav[aria-label="Primary"]{
-    display: flex !important;
-    gap: 12px;
-    flex-wrap: nowrap;
-    overflow: visible;
+  /* На очень узких (<=360px) позволим третью строку — без слипания */
+  @media (max-width: 360px) {
+    header nav[aria-label="Primary"] {
+      grid-template-columns: 1fr 1fr; /* останется 2 колонки, но можно 2–3 строки */
+      row-gap: 12px;
+    }
   }
 }
 
