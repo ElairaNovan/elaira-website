@@ -442,7 +442,7 @@ img {
 
 
 
-/* === Mobile nav: горизонтальная прокрутка без обрезаний (только мобайл) === */
+/* === ❌ Старый блок: горизонтальная прокрутка навигации (отключён, заменён Wave A) ===
 @media (max-width: 820px) {
   /* сам контейнер <nav aria-label="Primary"> */
   header nav[aria-label="Primary"] {
@@ -476,4 +476,78 @@ img {
     font-size: 0.98rem;
     padding: 0.5rem 1rem;
   }
+
+
+  /* === Wave A: Header + Hero Mobile Optimization === */
+
+/* HEADER */
+header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem; /* равномерное расстояние между элементами */
+  padding: 0.6rem 1rem;
+  overflow-x: hidden; /* убираем горизонтальную прокрутку */
 }
+
+header .logo {
+  margin-right: 0.8rem; /* немного воздуха справа от логотипа */
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    text-align: center;
+  }
+
+  header .logo {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  header nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  header nav a {
+    flex: 1 1 auto;
+    text-align: center;
+    min-width: 120px;
+  }
+}
+
+/* HERO TEXT */
+.hero {
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+  line-height: 1.2;
+}
+
+.hero p {
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-top: 0.8rem;
+}
+
+/* HERO IMAGE (если есть) */
+.hero img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-top: 1rem;
+}
+
+
+
+
