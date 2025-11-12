@@ -658,3 +658,64 @@ img {
     gap: 4px;
   }
 }
+
+
+
+
+/* === MOBILE HEADER — enlarged logo final adjustment === */
+@media (max-width: 820px) {
+
+  /* логотип крупнее и чуть смещён вниз для баланса */
+  header .brand img,
+  header .logo img,
+  header .site-logo img,
+  header img[alt*="Elaira" i],
+  header img[alt*="logo" i] {
+    height: 44px; /* было 36px */
+    width: auto;
+    margin-top: 2px;
+  }
+
+  /* кнопки чуть компактнее, чтобы влезли рядом */
+  .nav-chip {
+    font-size: 0.7rem;
+    padding: 0.22rem 0.45rem;
+    border-radius: 8px;
+  }
+
+  header nav[aria-label="Primary"] {
+    gap: 5px;
+  }
+}
+
+/* iPhone 13 / Pixel 7 (390–412px) */
+@media (max-width: 412px) {
+  header .brand img,
+  header .logo img,
+  header .site-logo img {
+    height: 40px;
+  }
+  .nav-chip {
+    font-size: 0.68rem;
+    padding: 0.2rem 0.42rem;
+  }
+  header nav[aria-label="Primary"] {
+    gap: 4px;
+  }
+}
+
+/* iPhone SE и уже */
+@media (max-width: 375px) {
+  header .brand img,
+  header .logo img,
+  header .site-logo img {
+    height: 38px;
+  }
+  .nav-chip {
+    font-size: 0.66rem;
+    padding: 0.18rem 0.4rem;
+  }
+  header nav[aria-label="Primary"] {
+    gap: 3.5px;
+  }
+}
