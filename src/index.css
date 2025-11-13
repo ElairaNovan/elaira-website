@@ -440,73 +440,65 @@ img {
 
 
 
-/* === MOBILE HEADER: centered big logo + 2x2 nav under it === */
+/* === MOBILE HEADER FIX: center logo, nav below in 2 columns === */
 @media (max-width: 820px) {
 
-  /* основной блок в шапке: логотип + навигация */
-  header .site-frame > div {
+  /* Делаем весь header вертикальным стеком */
+  header {
     display: flex !important;
-    flex-direction: column !important;   /* ЛОГО СВЕРХУ, КНОПКИ СНИЗУ */
-    align-items: center !important;       /* всё по центру */
-    justify-content: flex-start;
-    gap: 12px;
-    padding-top: 10px;
-    padding-bottom: 6px;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    padding: 10px 12px 6px;
+    row-gap: 10px;
   }
 
-  /* логотип по центру и крупнее */
-  header .site-frame > div > :first-child {
+  /* Все прямые дети header (логотип+контейнер с меню) на всю ширину */
+  header > * {
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 
-  /* именно картинка логотипа Elaira Novan */
+  /* ЛОГОТИП — строго по центру и крупнее */
   img[alt*="Elaira Novan"] {
     display: block;
-    margin-inline: auto;
-    height: 80px;                 /* УВЕЛИЧЕННЫЙ ЛОГОТИП */
-    width: auto !important;       /* перебиваем w-[160px] из Tailwind */
+    margin-inline: auto;      /* центрируем картинку */
+    height: 80px;             /* увеличиваем пропорционально */
+    width: auto !important;   /* перебиваем w-[160px] tailwind */
     max-width: 80vw;
   }
 
-  /* навигация под логотипом во всю ширину */
+  /* НАВИГАЦИЯ — под логотипом, 2 колонки на всю ширину */
   header nav[aria-label="Primary"] {
-    width: 100%;
-    display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr));   /* 2 колонки */
+    display: grid !important;                      /* перебиваем .flex gap-3 */
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     column-gap: 10px;
     row-gap: 10px;
     justify-items: stretch;
+    width: 100%;
+    margin-top: 6px;
   }
 
-  /* сами кнопки */
+  /* КНОПКИ — растянуть по ячейкам сетки */
   .nav-chip {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    font-size: 0.8rem;
+    font-size: 0.82rem;
     padding: 0.45rem 0.4rem;
     border-radius: 10px;
-    white-space: normal;            /* можно переносить текст */
-  }
-
-  /* отступ от шапки до следующего блока */
-  header + * {
-    margin-top: 16px;
+    white-space: normal;
   }
 }
 
-/* очень узкие (iPhone SE и т.п.) — чуть уменьшаем */
+/* Очень узкие экраны (iPhone SE и похожие) — чуть компактней */
 @media (max-width: 375px) {
   img[alt*="Elaira Novan"] {
     height: 70px;
   }
 
   .nav-chip {
-    font-size: 0.76rem;
+    font-size: 0.78rem;
     padding: 0.4rem 0.35rem;
   }
 
