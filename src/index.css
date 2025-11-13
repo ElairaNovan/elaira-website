@@ -455,52 +455,49 @@ img {
 }
 
 
-/* Адаптивный заголовок Hero — перекрываем inline-стиль */
-.site-frame h1 {
-  font-size: clamp(2rem, 5vw + 1rem, 3.4rem) !important;
-  line-height: 1.1;
+/* === HERO: только самый первый главный заголовок на странице === */
+main > section.site-frame:first-of-type h1 {
+  font-size: clamp(2.2rem, 5vw + 1rem, 3.4rem) !important;
+  line-height: 1.12;
 }
 
-
-/* ===== Essence Intro block ===== */
-
-#essence-intro {
-  max-width: 40rem;                 /* комфортная ширина текста */
+/* === ESSENCE: текст под первым изображением (секция #essence) === */
+#essence {
+  max-width: 40rem;
   margin: 0 auto;
   padding-inline: 1.25rem;
 }
 
-/* первый абзац — “заголовок-предложение” */
-#essence-intro p:first-of-type {
-  font-size: clamp(1.4rem, 3.8vw, 1.9rem);
-  line-height: 1.35;
-  color: #26cfff;
-  margin-bottom: 1.1rem;
-  text-align: left;                 /* НИКАКОГО justify */
-}
-
-/* все остальные абзацы */
-#essence-intro p:nth-of-type(n + 2) {
+/* все абзацы внутри ESSENCE — ровный текст, БЕЗ justify и дыр между словами */
+#essence p {
   font-size: 1.02rem;
   line-height: 1.7;
   color: rgba(230, 245, 255, 0.9);
-  text-align: left;                 /* ровный, спокойный текст */
+  text-align: left;
+  text-justify: auto;
+  word-spacing: normal;
   margin-bottom: 0.95rem;
+}
+
+/* первое предложение (Elaira Novan is a Bridge...) — чуть как подзаголовок */
+#essence p:first-of-type {
+  font-size: 1.2rem;
+  color: #26cfff;
 }
 
 /* лёгкая подстройка под узкие мобильные экраны */
 @media (max-width: 640px) {
-  #essence-intro {
+  #essence {
     max-width: 36rem;
     padding-inline: 1rem;
   }
 
-  #essence-intro p:first-of-type {
-    font-size: clamp(1.25rem, 4vw, 1.7rem);
-  }
-
-  #essence-intro p:nth-of-type(n + 2) {
+  #essence p {
     font-size: 0.98rem;
     line-height: 1.65;
+  }
+
+  #essence p:first-of-type {
+    font-size: 1.15rem;
   }
 }
