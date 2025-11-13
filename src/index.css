@@ -487,3 +487,44 @@ img {
 .manifest-foot {
   text-align: center;
 }
+
+
+/* --- Улучшенное выравнивание текста ("smart justify") --- */
+
+/* Общий стиль параграфов */
+.site-frame p {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  word-spacing: 0; 
+  line-height: 1.55;
+  font-size: 1.05rem;
+}
+
+/* Заголовки внутри текста — НЕ justify */
+.site-frame h2,
+.site-frame h3,
+.site-frame h4 {
+  text-align: left;
+  hyphens: none;
+  word-spacing: normal;
+}
+
+/* Контейнер немного сужаем на мобильных — так текст всегда выглядит идеально */
+@media (max-width: 640px) {
+  .site-frame {
+    max-width: 92%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .site-frame p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
+
+/* Смягчение больших дыр между словами */
+.site-frame p::first-line {
+  word-spacing: normal;
+}
