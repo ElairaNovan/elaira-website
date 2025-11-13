@@ -568,21 +568,15 @@ main > section.site-frame:first-of-type h1 {
 }
 
 
-/* ===== MANIFEST title — mobile only (без дыр между словами) ===== */
+/* ===== MANIFEST title — mobile tidy layout ===== */
 @media (max-width: 767px) {
   .manifest-title {
-    text-align: left !important;       /* не растягиваем, чтобы не было дыр */
-    hyphens: auto;                     /* переносы через тире */
-    -webkit-hyphens: auto;            /* для Safari / iOS */
-    -ms-hyphens: auto;                /* для старых двигателей MS */
-    word-break: normal;
-    overflow-wrap: break-word;
-
-    /* немного помогаем оптике */
-    max-width: 95%;
-    margin-inline: auto;
-    font-size: 1.7rem;
-    line-height: 1.3;
+    text-align: center;       /* центр, без justify → без дыр */
+    max-width: 20ch;          /* узкий столбец, смотрится "монолитно" */
+    margin-inline: auto;      /* выровнять сам блок по центру */
+    line-height: 1.3;         /* чуть плотнее строки */
+    font-size: 1.6rem;        /* мягкий размер под мобайл */
   }
 }
+
 
