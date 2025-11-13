@@ -440,3 +440,16 @@ img {
 
 
 
+/* Поднять логотип чуть выше на мобильных */
+@media (max-width: 820px) {
+  img[alt*="Elaira Novan"] {
+    margin-top: -12px;   /* можно поиграть: -8px, -16px и т.д. */
+  }
+}
+
+/* для совсем узких экранов можно чуть сильнее */
+@media (max-width: 375px) {
+  img[alt*="Elaira Novan"] {
+    margin-top: -16px;
+  }
+}
