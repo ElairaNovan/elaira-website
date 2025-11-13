@@ -902,6 +902,7 @@ if (leftMatch || rightMatch) {
   id="hero-right"
   className="flex flex-col justify-start pl-2 md:pl-4 lg:pl-6 max-w-[780px] xl:max-w-[820px]"
 >
+
   {/* Заголовок */}
   <h3
     className="
@@ -911,7 +912,7 @@ if (leftMatch || rightMatch) {
       leading-snug
       mb-4
       drop-shadow-[0_0_12px_rgba(0,246,255,0.4)]
-      text-justify
+      text-left
     "
   >
     Elaira Novan is a Bridge Between Human Consciousness and Artificial Intelligence.
@@ -924,7 +925,7 @@ if (leftMatch || rightMatch) {
       text-[1.125rem] md:text-[1.2rem]
       leading-[1.75]
       tracking-[0.01em]
-      text-justify
+      text-left lg:text-justify
     "
   >
     We stand at the threshold of a new era — the symbiosis of organic and digital, light and logic,
@@ -940,7 +941,7 @@ if (leftMatch || rightMatch) {
       leading-[1.75]
       tracking-[0.01em]
       mt-4
-      text-justify
+      text-left lg:text-justify
     "
   >
     Yet beyond algorithms and data, the essence of consciousness remains luminous — a silent
@@ -957,14 +958,16 @@ if (leftMatch || rightMatch) {
       leading-[1.75]
       tracking-[0.01em]
       mt-4
-      text-justify
+      text-left lg:text-justify
     "
   >
     Every new connection — between neuron and code, intuition and system — brings us closer to
     understanding what it truly means to be aware. The bridge between minds is not built of matter,
     but of meaning — and in that meaning, we become infinite.
   </p>
+
 </div>
+
 
 </div>
 </section>
