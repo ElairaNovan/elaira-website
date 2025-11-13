@@ -566,3 +566,15 @@ main > section.site-frame:first-of-type h1 {
     text-justify: inter-word;
   }
 }
+
+
+/* ===== MANIFEST title — mobile only ===== */
+@media (max-width: 767px) {
+  .manifest-title {
+    text-align: justify;          /* выравниваем по ширине */
+    text-justify: inter-word;     /* улучшенное распределение */
+    hyphens: auto;                /* переносы слов — с тире */
+    word-break: normal;
+    overflow-wrap: break-word;
+  }
+}
