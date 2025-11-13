@@ -512,3 +512,18 @@ main > section.site-frame:first-of-type h1 {
     text-justify: inter-word;
   }
 }
+
+
+
+/* HERO-RIGHT — финальная версия выравнивания */
+
+/* Заголовок: всегда по левому краю */
+#hero-right h3 {
+  text-align: left !important;
+}
+
+/* Текст абзацев: всегда по ширине */
+#hero-right p {
+  text-align: justify !important;
+  text-justify: inter-word;
+}
