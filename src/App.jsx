@@ -721,60 +721,61 @@ if (leftMatch || rightMatch) {
           paddingBottom: "1.5rem",
         }}
       >
-        <div
-          className="
-            flex items-start justify-between
-            max-w-[1400px]
-            mx-auto
-            px-6
-            pt-8
-          "
-        >
-          {/* логотип */}
-<ENFullLogo
+       <div
   className="
-    flex flex-col items-center gap-2       /* MOBILE: центр */
-    md:items-start md:gap-2 md:-ml-2       /* DESKTOP: как раньше */
-  "
-/>
-
-{/* меню */}
-<nav
-  aria-label="Primary"
-  className="
-    w-full grid grid-cols-2 gap-3 mt-3     /* MOBILE: сетка 2×2 */
-    md:w-auto md:mt-0 md:flex md:flex-row md:gap-3   /* DESKTOP: как раньше, ряд кнопок */
+    flex flex-col items-center gap-3          /* MOBILE: колонка, всё по центру */
+    max-w-[1400px]
+    mx-auto
+    px-6
+    pt-8
+    md:flex-row md:items-start md:justify-between  /* DESKTOP: как раньше */
   "
 >
-  <a
-    href="#essence"
-    className={`nav-chip breath-chip ${activeSection === "essence" ? "is-active" : ""}`}
+  {/* логотип */}
+  <ENFullLogo
+    className="
+      flex flex-col items-center gap-2        /* MOBILE: центр */
+      md:items-start md:gap-2 md:-ml-2        /* DESKTOP: как раньше слева */
+    "
+  />
+
+  {/* меню */}
+  <nav
+    aria-label="Primary"
+    className="
+      w-full grid grid-cols-2 gap-3 mt-3      /* MOBILE: 2 колонки на всю ширину */
+      md:w-auto md:mt-0 md:flex md:flex-row md:gap-3  /* DESKTOP: строка как раньше */
+    "
   >
-    Essence
-  </a>
-  <a
-    href="#philosophy"
-    className={`nav-chip breath-chip ${activeSection === "philosophy" ? "is-active" : ""}`}
-  >
-    Philosophy
-  </a>
-  <a
-    href="#research"
-    className={`nav-chip breath-chip ${activeSection === "research" ? "is-active" : ""}`}
-  >
-    Research
-  </a>
-  <a
-    href="#footer"
-    className={`nav-chip breath-chip ${activeSection === "footer" ? "is-active" : ""}`}
-  >
-    Vision
-  </a>
-</nav>
+    <a
+      href="#essence"
+      className={`nav-chip breath-chip ${activeSection === "essence" ? "is-active" : ""}`}
+    >
+      Essence
+    </a>
+    <a
+      href="#philosophy"
+      className={`nav-chip breath-chip ${activeSection === "philosophy" ? "is-active" : ""}`}
+    >
+      Philosophy
+    </a>
+    <a
+      href="#research"
+      className={`nav-chip breath-chip ${activeSection === "research" ? "is-active" : ""}`}
+    >
+      Research
+    </a>
+    <a
+      href="#footer"
+      className={`nav-chip breath-chip ${activeSection === "footer" ? "is-active" : ""}`}
+    >
+      Vision
+    </a>
+  </nav>
+</div>
 
 
 
-        </div>
       </header>
 
       {/* фоновые свечения */}
