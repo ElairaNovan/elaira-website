@@ -731,10 +731,21 @@ if (leftMatch || rightMatch) {
           "
         >
           {/* логотип */}
-          <ENFullLogo className="flex flex-col items-start gap-2 -ml-2" />
+<ENFullLogo
+  className="
+    flex flex-col items-center gap-2       /* MOBILE: центр */
+    md:items-start md:gap-2 md:-ml-2       /* DESKTOP: как раньше */
+  "
+/>
 
-          {/* меню */}
-        <nav className="flex gap-3" aria-label="Primary">
+{/* меню */}
+<nav
+  aria-label="Primary"
+  className="
+    w-full grid grid-cols-2 gap-3 mt-3     /* MOBILE: сетка 2×2 */
+    md:w-auto md:mt-0 md:flex md:flex-row md:gap-3   /* DESKTOP: как раньше, ряд кнопок */
+  "
+>
   <a
     href="#essence"
     className={`nav-chip breath-chip ${activeSection === "essence" ? "is-active" : ""}`}
