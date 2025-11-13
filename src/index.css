@@ -453,3 +453,10 @@ img {
     margin-top: -24px;
   }
 }
+
+
+/* Адаптивный заголовок Hero — перекрываем inline-стиль */
+.site-frame h1 {
+  font-size: clamp(2rem, 5vw + 1rem, 3.4rem) !important;
+  line-height: 1.1;
+}
