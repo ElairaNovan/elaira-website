@@ -723,14 +723,15 @@ if (leftMatch || rightMatch) {
       >
        <div
   className="
-    flex flex-col items-center gap-3          /* MOBILE: колонка, всё по центру */
+    flex flex-col items-center gap-2           /* Было gap-3 → теперь меньше */
     max-w-[1400px]
     mx-auto
     px-6
-    pt-8
-    md:flex-row md:items-start md:justify-between  /* DESKTOP: как раньше */
+    pt-4                                      /* Было pt-8 → теперь выше */
+    md:flex-row md:items-start md:justify-between md:gap-3 md:pt-8
   "
 >
+
   {/* логотип */}
   <ENFullLogo
     className="
@@ -748,29 +749,49 @@ if (leftMatch || rightMatch) {
     "
   >
     <a
-      href="#essence"
-      className={`nav-chip breath-chip ${activeSection === "essence" ? "is-active" : ""}`}
-    >
-      Essence
-    </a>
-    <a
-      href="#philosophy"
-      className={`nav-chip breath-chip ${activeSection === "philosophy" ? "is-active" : ""}`}
-    >
-      Philosophy
-    </a>
-    <a
-      href="#research"
-      className={`nav-chip breath-chip ${activeSection === "research" ? "is-active" : ""}`}
-    >
-      Research
-    </a>
-    <a
-      href="#footer"
-      className={`nav-chip breath-chip ${activeSection === "footer" ? "is-active" : ""}`}
-    >
-      Vision
-    </a>
+  href="#essence"
+  className={`
+    nav-chip breath-chip
+    flex items-center justify-center text-center
+    ${activeSection === "essence" ? "is-active" : ""}
+  `}
+>
+  Essence
+</a>
+
+<a
+  href="#philosophy"
+  className={`
+    nav-chip breath-chip
+    flex items-center justify-center text-center
+    ${activeSection === "philosophy" ? "is-active" : ""}
+  `}
+>
+  Philosophy
+</a>
+
+<a
+  href="#research"
+  className={`
+    nav-chip breath-chip
+    flex items-center justify-center text-center
+    ${activeSection === "research" ? "is-active" : ""}
+  `}
+>
+  Research
+</a>
+
+<a
+  href="#footer"
+  className={`
+    nav-chip breath-chip
+    flex items-center justify-center text-center
+    ${activeSection === "footer" ? "is-active" : ""}
+  `}
+>
+  Vision
+</a>
+
   </nav>
 </div>
 
