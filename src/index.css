@@ -474,3 +474,25 @@ main > section.site-frame:first-of-type h1 {
     text-justify: auto !important;
   }
 }
+
+/* ============================================================
+   FIX FOR HERO TEXT SPACING — MOBILE & DESKTOP
+   Работает только для секции hero-right
+   ============================================================ */
+
+/* MOBILE: отключаем растягивание, чтобы не было огромных пробелов */
+@media (max-width: 767px) {
+  #hero-right h3,
+  #hero-right p {
+    text-align: left !important;
+  }
+}
+
+/* DESKTOP: включаем красивое журнальное выравнивание */
+@media (min-width: 768px) {
+  #hero-right h3,
+  #hero-right p {
+    text-align: justify;
+    text-justify: inter-word;
+  }
+}
