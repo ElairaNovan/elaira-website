@@ -450,6 +450,6 @@ img {
 /* для совсем узких экранов можно чуть сильнее */
 @media (max-width: 375px) {
   img[alt*="Elaira Novan"] {
-    margin-top: -20px;
+    margin-top: -24px;
   }
 }
