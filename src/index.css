@@ -462,69 +462,45 @@ img {
 }
 
 
-/* ===== ВЫРАВНИВАНИЕ ВСЕГО КОНТЕНТ-ТЕКСТА ПО ШИРИНЕ ===== */
+/* ===== Essence Intro block ===== */
 
-/* Правая колонка (hero text) */
-#hero-right p,
-#hero-right h3 {
-  text-align: justify;
-  text-align-last: left;
+#essence-intro {
+  max-width: 40rem;                 /* комфортная ширина текста */
+  margin: 0 auto;
+  padding-inline: 1.25rem;
 }
 
-/* Manifest — выравниваем основной текст */
-.manifest-body {
-  text-align: justify;
-  text-align-last: left;
+/* первый абзац — “заголовок-предложение” */
+#essence-intro p:first-of-type {
+  font-size: clamp(1.4rem, 3.8vw, 1.9rem);
+  line-height: 1.35;
+  color: #26cfff;
+  margin-bottom: 1.1rem;
+  text-align: left;                 /* НИКАКОГО justify */
 }
 
-/* Заголовок тоже слегка выравниваем (опционально — но выглядит красиво) */
-.manifest-title {
-  text-align: justify;
-  text-align-last: center;
+/* все остальные абзацы */
+#essence-intro p:nth-of-type(n + 2) {
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: rgba(230, 245, 255, 0.9);
+  text-align: left;                 /* ровный, спокойный текст */
+  margin-bottom: 0.95rem;
 }
 
-/* Маленький подзаголовок (при желании убрать — скажи) */
-.manifest-foot {
-  text-align: center;
-}
-
-
-/* --- Улучшенное выравнивание текста ("smart justify") --- */
-
-/* Общий стиль параграфов */
-.site-frame p {
-  text-align: justify;
-  text-justify: inter-word;
-  hyphens: auto;
-  word-spacing: 0; 
-  line-height: 1.55;
-  font-size: 1.05rem;
-}
-
-/* Заголовки внутри текста — НЕ justify */
-.site-frame h2,
-.site-frame h3,
-.site-frame h4 {
-  text-align: left;
-  hyphens: none;
-  word-spacing: normal;
-}
-
-/* Контейнер немного сужаем на мобильных — так текст всегда выглядит идеально */
+/* лёгкая подстройка под узкие мобильные экраны */
 @media (max-width: 640px) {
-  .site-frame {
-    max-width: 92%;
-    margin-left: auto;
-    margin-right: auto;
+  #essence-intro {
+    max-width: 36rem;
+    padding-inline: 1rem;
   }
 
-  .site-frame p {
-    font-size: 1rem;
-    line-height: 1.6;
+  #essence-intro p:first-of-type {
+    font-size: clamp(1.25rem, 4vw, 1.7rem);
   }
-}
 
-/* Смягчение больших дыр между словами */
-.site-frame p::first-line {
-  word-spacing: normal;
+  #essence-intro p:nth-of-type(n + 2) {
+    font-size: 0.98rem;
+    line-height: 1.65;
+  }
 }
