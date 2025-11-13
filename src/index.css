@@ -496,3 +496,19 @@ main > section.site-frame:first-of-type h1 {
     text-justify: inter-word;
   }
 }
+
+
+/* HERO-RIGHT: заголовок всегда по левому краю, текст абзацев — по ширине */
+
+/* Мобилки + планшеты + десктопы: заголовок не растягиваем */
+#hero-right h3 {
+  text-align: left !important;
+}
+
+/* Только десктопы: абзацы красиво по ширине */
+@media (min-width: 768px) {
+  #hero-right p {
+    text-align: justify;
+    text-justify: inter-word;
+  }
+}
