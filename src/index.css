@@ -536,3 +536,33 @@ main > section.site-frame:first-of-type h1 {
   }
 }
 
+
+
+/* =============================
+   MANIFEST — фикс выравнивания
+   ============================= */
+
+/* 📱 Мобильные: отключаем justify, чтобы убрать большие пробелы */
+@media (max-width: 767px) {
+  .manifest-title,
+  .manifest-body,
+  .manifest-foot {
+    text-align: left !important;
+    text-justify: auto !important;
+    word-spacing: normal !important;
+    hyphens: none !important;
+  }
+}
+
+/* 🖥 ПК: оставляем только тело по ширине, остальное слева */
+@media (min-width: 768px) {
+  .manifest-title,
+  .manifest-foot {
+    text-align: left !important;
+  }
+
+  .manifest-body {
+    text-align: justify !important;
+    text-justify: inter-word;
+  }
+}
