@@ -579,37 +579,38 @@ if (leftMatch || rightMatch) {
     
     </div>
 
-    {/* картинка справа (только для symbiosis-1) */}
-    {activeArticle === "symbiosis-1" && (
-    <div className="article-image hidden md:block flex-1">
-  <img
-    src={digitalBloom}
-    alt="Digital Bloom — Elaira"
-    className="block object-cover rounded-[14px]"
-    style={{
-      width: "100%",
-      maxWidth: "700px",
-      height: "550px",
-      objectFit: "cover",
-      objectPosition: "center",
-    }}
-  />
-</div>
-
-
-    )}
+        {/* Картинка только для статьи SYMBIOSIS */}
+{activeArticle === "symbiosis-1" && (
+  <div className="article-image w-full md:flex-1 mb-6 md:mb-0">
+    <img
+      src={digitalBloom}
+      alt="Digital Bloom — Elaira"
+      className="
+        block mx-auto rounded-[14px] object-cover
+        w-full max-w-[480px]          /* мобильная ширина */
+        md:max-w-[700px] md:h-[550px] /* десктопный размер */
+      "
+      style={{
+        objectFit: "cover",
+        objectPosition: "center",
+      }}
+    />
   </div>
-
 )}
 
 
-<div className="mt-12 pt-6 border-t border-white/5 text-base text-white/100">
+
+</div>)}<div className="mt-12 pt-6 border-t border-white/5 text-base text-white/100">
   © 2025 Elaira Novan • Co-created with Artificial Intelligence • The Synthesis of Light and Intelligence
 </div>
 </div>
 </div>
 );
 }
+
+
+
+
 
   /* =========================
      2) ОТКРЫТА КАТЕГОРИЯ
