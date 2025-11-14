@@ -598,9 +598,10 @@ const categoryLabel = categoryOfArticle ? categoryOfArticle.replace(/-/g, " ").t
       className="
         block mx-auto rounded-[14px] object-cover
         w-full
-        max-w-[480px]          
-        md:w-[700px]           /* фиксированная ПК-ширина как раньше */
-        md:h-[550px]           /* исходная ПК-высота */
+        max-w-[480px]          /* мобильные — как сейчас */
+        md:w-full              /* ПК — растягиваем на всю ширину */
+        md:max-w-[700px]       /* ограничиваем, как изначально */
+        md:h-[550px]
       "
       style={{
         objectFit: "cover",
@@ -609,6 +610,7 @@ const categoryLabel = categoryOfArticle ? categoryOfArticle.replace(/-/g, " ").t
     />
   </div>
 )}
+
 
 
 </div>)}<div className="mt-12 pt-6 border-t border-white/5 text-base text-white/100">
