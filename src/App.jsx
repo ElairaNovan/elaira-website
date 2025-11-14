@@ -581,20 +581,31 @@ if (leftMatch || rightMatch) {
 
     {/* картинка справа (только для symbiosis-1) */}
     {activeArticle === "symbiosis-1" && (
-      <div className="article-image hidden md:block flex-1">
-        <img
-          src={digitalBloom}
-          alt="Digital Bloom — Elaira"
-          className="block object-cover rounded-[14px]"
-          style={{
-            width: "100%",
-            maxWidth: "700px",
-            height: "550px",
-            objectFit: "cover",
-            objectPosition: "center",
-          }}
-        />
-      </div>
+     <div
+  className="
+    article-image
+    block                /* показывать везде */
+    w-full
+    mb-6
+    md:mb-0
+    md:flex-1
+    md:block            /* ПК-версия как раньше */
+  "
+>
+  <img
+    src={digitalBloom}
+    alt="Digital Bloom — Elaira"
+    className="block object-cover rounded-[14px] mx-auto"
+    style={{
+      width: "100%",
+      maxWidth: "700px",
+      height: "auto",
+      objectFit: "cover",
+      objectPosition: "center",
+    }}
+  />
+</div>
+
     )}
   </div>
 
