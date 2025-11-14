@@ -443,7 +443,13 @@ const categoryLabel = categoryOfArticle ? categoryOfArticle.replace(/-/g, " ").t
   </div>
 ) : (
   /* ====== ДЛЯ ВСЕГО ОСТАЛЬНОГО — как было ====== */
- <div className={`article-shell items-start ${isDS1 || activeArticle === "robots-1" ? "" : "flex gap-10"}`}>
+ <div
+  className={`article-shell items-start ${
+    isDS1 || activeArticle === "robots-1"
+      ? ""
+      : "flex flex-col md:flex-row gap-10"
+  }`}
+>
 
     {/* текст слева */}
    <div className={`article-body ${
@@ -579,31 +585,24 @@ if (leftMatch || rightMatch) {
     
     </div>
 
-        {/* Картинка только для статьи SYMBIOSIS */}
+       {/* Картинка только для статьи SYMBIOSIS */}
 {activeArticle === "symbiosis-1" && (
   <div className="article-image w-full md:flex-1 mb-6 md:mb-0">
     <img
       src={digitalBloom}
       alt="Digital Bloom — Elaira"
+      className="
+        block mx-auto rounded-[14px] object-cover
+        w-full max-w-[480px]          /* мобильная ширина */
+        md:max-w-[700px] md:h-[550px] /* десктопный размер */
+      "
       style={{
-        display: "block",
-        width: "100%",
-        maxWidth: "480px",    // ширина на мобильных
-        height: "auto",
-        margin: "0 auto 1.2rem",
-        borderRadius: "14px",
         objectFit: "cover",
         objectPosition: "center",
-
-        // десктоп: пошире и выше
-        // эти размеры Tailwind всё равно подхватит через контейнер,
-        // но если хочешь, можно позже сделать отдельный media-query
       }}
     />
   </div>
 )}
-
-
 
 
 </div>)}<div className="mt-12 pt-6 border-t border-white/5 text-base text-white/100">
