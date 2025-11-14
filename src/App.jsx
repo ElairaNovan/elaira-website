@@ -593,8 +593,10 @@ if (leftMatch || rightMatch) {
       alt="Digital Bloom — Elaira"
       className="
         block mx-auto rounded-[14px] object-cover
-        w-full max-w-[480px]          /* мобильная ширина */
-        md:max-w-[700px] md:h-[550px] /* десктопный размер */
+        w-full
+        max-w-[480px]          
+        md:w-[700px]           /* фиксированная ПК-ширина как раньше */
+        md:h-[550px]           /* исходная ПК-высота */
       "
       style={{
         objectFit: "cover",
