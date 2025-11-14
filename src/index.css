@@ -182,11 +182,17 @@
   padding: 1.05rem 1.1rem;
   transition: all 0.3s ease;
 }
+
 #research .card:hover {
-  border-color: rgba(41, 214, 255, 0.35);
-  box-shadow: 0 0 16px rgba(41, 214, 255, 0.18);
+  border-color: rgba(41, 214, 255, 0.55);
+  box-shadow:
+    0 0 18px rgba(41, 214, 255, 0.35),
+    0 0 36px rgba(41, 214, 255, 0.22),
+    0 0 70px rgba(41, 214, 255, 0.12);
   transform: translateY(-2px);
 }
+
+
 #research h5 {
   color: rgba(41, 214, 255, 0.94);
   font-size: 1.1rem;
@@ -420,7 +426,7 @@ img { -webkit-user-drag: none; user-select: none; }
   display: none !important;
 }
 
-/* ROBOTS: тело статьи во всю ширину заголовка */
+/* а: тело статьи во всю ширину заголовка */
 .article-body.robots-wide { max-width: none !important; }
 
 
