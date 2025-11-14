@@ -577,4 +577,20 @@ main > section.site-frame:first-of-type h1 {
 }
 
 
+@media (max-width: 640px) {
+  .footer-section {
+    text-align: center !important;
+  }
+
+  .footer-section p,
+  .footer-section a,
+  .footer-section div {
+    font-size: 0.85rem !important; /* уменьшение шрифта */
+    line-height: 1.35 !important;
+  }
+
+  .footer-section br {
+    display: block;
+  }
+}
 
