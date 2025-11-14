@@ -585,18 +585,24 @@ if (leftMatch || rightMatch) {
     <img
       src={digitalBloom}
       alt="Digital Bloom — Elaira"
-      className="
-        block mx-auto rounded-[14px] object-cover
-        w-full max-w-[480px]          /* мобильная ширина */
-        md:max-w-[700px] md:h-[550px] /* десктопный размер */
-      "
       style={{
+        display: "block",
+        width: "100%",
+        maxWidth: "480px",    // ширина на мобильных
+        height: "auto",
+        margin: "0 auto 1.2rem",
+        borderRadius: "14px",
         objectFit: "cover",
         objectPosition: "center",
+
+        // десктоп: пошире и выше
+        // эти размеры Tailwind всё равно подхватит через контейнер,
+        // но если хочешь, можно позже сделать отдельный media-query
       }}
     />
   </div>
 )}
+
 
 
 

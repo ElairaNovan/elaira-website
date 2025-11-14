@@ -605,14 +605,5 @@ main > section.site-frame:first-of-type h1 {
 }
 
 
-/* ARTICLE IMAGES — MOBILE FIX */
-@media (max-width: 720px) {
-  .article-image img {
-    display: block;
-    width: 100% !important;      /* картинка на всю ширину текста */
-    max-width: 100% !important;
-    height: auto !important;     /* пропорции сохраняем */
-    margin: 0 auto 1.2rem;       /* по центру, отступ снизу */
-  }
-}
+
 
