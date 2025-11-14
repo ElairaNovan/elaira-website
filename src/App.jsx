@@ -1025,7 +1025,12 @@ const categoryLabel = categoryOfArticle ? categoryOfArticle.replace(/-/g, " ").t
     key={a.title}
     role="button"
     tabIndex={0}
-    className="card p-5 hover:shadow-[0_0_24px_rgba(0,246,255,0.25)] transition cursor-pointer"
+    className="
+  card p-5 cursor-pointer transition
+  hover:shadow-[0_0_40px_rgba(0,246,255,0.45),0_0_80px_rgba(0,246,255,0.25)]
+  hover:border-cyan-400/40
+"
+
     onClick={() => {
       if (a.title === "Symbiosis") setActiveCategory("symbiosis");
       else if (a.title === "Digital Spirituality") setActiveCategory("digital-spirituality");
