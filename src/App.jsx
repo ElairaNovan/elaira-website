@@ -278,7 +278,7 @@ const categoryLabel = categoryOfArticle ? categoryOfArticle.replace(/-/g, " ").t
      
      
  {isSideLayout ? (
-  /* ====== ЛЕВЫЙ/ЦЕНТР/ПРАВЫЙ: для robots-1 ====== */
+  /* ====== ЛЕВЫЙ/ЦЕНТР/ПРАВЫЙ: для <img-1 ====== */
  <div
   className="article-shell"
   style={{
@@ -509,31 +509,35 @@ const categoryLabel = categoryOfArticle ? categoryOfArticle.replace(/-/g, " ").t
     );
   }
 
-  // 2) Картинки с обтеканием — слева или справа
-const isString = typeof p === "string";
-const leftMatch = isString ? p.trim().match(/^__IMG_(\d+)__$/) : null;
-const rightMatch = isString ? p.trim().match(/^__IMG_(\d+)_RIGHT__$/) : null;
+    // 2) Картинки с обтеканием — слева или справа
+  const isString = typeof p === "string";
+  const leftMatch = isString ? p.trim().match(/^__IMG_(\d+)__$/) : null;
+  const rightMatch = isString ? p.trim().match(/^__IMG_(\d+)_RIGHT__$/) : null;
 
-if (leftMatch || rightMatch) {
-  const imgId = leftMatch ? leftMatch[1] : rightMatch[1];
-  const src = inlineImages ? inlineImages[imgId] : undefined;
-  const isRight = Boolean(rightMatch);
+  if (leftMatch || rightMatch) {
+    const imgId = leftMatch ? leftMatch[1] : rightMatch[1];
+    const src = inlineImages ? inlineImages[imgId] : undefined;
+    const isRight = Boolean(rightMatch);
 
-  if (!src) return <React.Fragment key={`img-missing-${i}`} />;
+    if (!src) return <React.Fragment key={`img-missing-${i}`} />;
 
-  return (
-    <img
-      key={`img-${i}`}
-      src={src}
-      alt=""
-      className={`${
-        isRight ? "float-right ml-4" : "float-left mr-4"
-      } mb-2 w-[220px] sm:w-[240px] md:w-[280px] lg:w-[300px] rounded-md select-none`}
-      draggable={false}
-      style={{ shapeOutside: "margin-box" }}
-    />
-  );
-}
+    return (
+      <img
+        key={`img-${i}`}
+        src={src}
+        alt=""
+        className={`
+          block mx-auto rounded-md select-none
+          w-full max-w-[380px] mb-4                /* 📱 МОБИЛЬНЫЕ: блок по центру, без обтекания */
+          md:w-[280px] md:max-w-none md:mb-2       /* 💊/💻 с md и выше: как раньше по размеру */
+          lg:w-[300px]
+          ${isRight ? "md:float-right md:ml-4" : "md:float-left md:mr-4"}  /* обтекание только с md */
+        `}
+        draggable={false}
+        style={{ shapeOutside: "margin-box" }}
+      />
+    );
+  }
 
 
   // 3) Обычный абзац с подзаголовком ДО него
