@@ -569,14 +569,12 @@ main > section.site-frame:first-of-type h1 {
 
 
 
-/* ===== MANIFEST TITLE — MOBILE FIX (ПК НЕ ТРОГАЕМ) ===== */
+/* MANIFEST: перенос строк заголовка только на мобильных */
 @media (max-width: 767px) {
-  .manifest-title {
-    text-align: center;       /* НЕ justify → нет дыр */
-    max-width: 22ch;          /* делаем колонку аккуратнее */
-    margin-inline: auto;      /* центрируем блок */
-    line-height: 1.25;        /* сгущаем текст */
+  .manifest-title span {
+    display: block;      /* каждая часть с новой строки */
   }
 }
+
 
 
