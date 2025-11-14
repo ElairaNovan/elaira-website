@@ -297,11 +297,39 @@
 .footer-link:hover { color: #ffffff; }
 .footer-dot { color: rgba(220, 240, 255, 0.7); font-weight: 300; }
 .footer-amp { color: rgba(210, 245, 255, 0.75); margin: 0 0.25rem; }
+
 @media (max-width: 900px) {
-  .footer-bar { flex-direction: column; align-items: flex-start; }
-  .footer-center { white-space: normal; text-align: left; }
-  .footer-right { flex-wrap: wrap; }
+  .footer-bar {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.95rem;
+    gap: 1rem;
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    text-align: center;
+    width: 100%;
+  }
+
+  .footer-center {
+    white-space: normal;
+  }
+
+  .footer-right {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .footer-link {
+    font-size: 1rem;
+  }
 }
+
 
 /* =============================
    Global font (optional)

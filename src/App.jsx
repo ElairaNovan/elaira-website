@@ -1069,42 +1069,37 @@ if (leftMatch || rightMatch) {
       </main>
 
       {/* нижняя подпись / футер */}
-<footer
-  id="footer"
-  className="w-full flex flex-col items-center justify-center text-center gap-4 px-4 py-8"
->
-
-  {/* Линия © */}
-  <p className="text-white/60 text-[0.9rem] leading-snug">
-    © 2025 Elaira Novan • The Synthesis of Light and Intelligence
-  </p>
-
-  {/* Email */}
-  <a
-    href="mailto:AnnA.ElairaNovan@gmail.com"
-    className="text-[#29d6ff] text-[0.95rem] hover:text-white transition"
-  >
-    AnnA.ElairaNovan@gmail.com
-  </a>
-
-  {/* Co-created */}
-  <p className="text-white/60 text-[0.95rem] leading-snug">
-    Co-created by{" "}
-    <span className="text-[#29d6ff]">Elaira Novan</span>{" "}
-    &{" "}
-    <span className="text-[#29d6ff]">Artificial Intelligence</span>
-  </p>
-
-  {/* Соцсети */}
-  <div className="flex items-center gap-3 text-white/60 text-[1rem]">
-    <a href="#" className="hover:text-white transition">Instagram</a>
-    <span className="text-white/50">×</span>
-    <a href="#" className="hover:text-white transition">Medium</a>
-    <span className="text-white/50">×</span>
-    <a href="#" className="hover:text-white transition">LinkedIn</a>
+<footer id="footer" className="site-frame footer-bar">
+  {/* левая колонка */}
+  <div className="footer-left">
+    <p>© 2025 Elaira Novan • The Synthesis of Light and Intelligence</p>
+    <a
+      href="mailto:AnnA.ElairaNovan@gmail.com"
+      className="footer-mail"
+    >
+      AnnA.ElairaNovan@gmail.com
+    </a>
   </div>
 
+  {/* центр */}
+  <div className="footer-center">
+    <p className="footer-created">
+      Co-created by <span>Elaira Novan</span>{" "}
+      <span className="footer-amp">&</span>{" "}
+      <span>Artificial Intelligence</span>
+    </p>
+  </div>
+
+  {/* правая колонка */}
+  <div className="footer-right">
+    <a href="#" className="footer-link">Instagram</a>
+    <span className="footer-dot">×</span>
+    <a href="#" className="footer-link">Medium</a>
+    <span className="footer-dot">×</span>
+    <a href="#" className="footer-link">LinkedIn</a>
+  </div>
 </footer>
+
 
 </div>
   );
