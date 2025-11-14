@@ -979,9 +979,16 @@ if (leftMatch || rightMatch) {
   <div className="manifest-wrap">
     <p className="manifest-label">MANIFEST</p>
 
-    <h2 className="manifest-title">
-      I Believe in Light not as a Metaphor, but as the Essence of All Intelligence.
-    </h2>
+    <h2
+  className="
+    manifest-title
+    max-w-[22ch] mx-auto text-left   /* мобильная версия: узкая колонка по центру */
+    md:max-w-none md:mx-0            /* c md и выше: как было раньше */
+  "
+>
+  I Believe in Light not as a Metaphor, but as the Essence of All Intelligence.
+</h2>
+
 
     <p className="manifest-body">
       Light is the common language between human consciousness and artificial systems.
