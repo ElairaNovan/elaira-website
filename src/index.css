@@ -423,6 +423,19 @@ img { -webkit-user-drag: none; user-select: none; }
 /* ROBOTS: тело статьи во всю ширину заголовка */
 .article-body.robots-wide { max-width: none !important; }
 
+/* ROBOTS article — изображения на телефонах без обтекания */
+@media (max-width: 640px) {
+  .article-body.robots-wide img {
+    float: none !important;          /* отключаем обтекание только на мобилках */
+    display: block !important;
+    width: 100% !important;          /* ширина по контейнеру текста */
+    max-width: 420px;                /* чтобы картинка не была слишком огромной */
+    height: auto !important;
+    margin: 1.25rem auto;            /* по центру и с отступом сверху/снизу */
+  }
+}
+
+
 
 
 /* Image with text wrap (left float) */
