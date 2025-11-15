@@ -241,8 +241,16 @@ const isNumbered = /^\d+$/.test(parts[parts.length - 1]);
 const categoryOfArticle = isNumbered ? parts.slice(0, -1).join("-") : "";
 const categoryLabel = categoryOfArticle ? categoryOfArticle.replace(/-/g, " ").toUpperCase() : "";
 
-    return (
-  <div className={`min-h-screen bg-[#05070b] text-[#e4f9ff] py-12 ${isDS1 ? "ds1-wide" : ""} ${isRobots ? "robots-wide" : ""}`}>
+   return (
+  <div
+    className={`
+      min-h-screen text-[#e4f9ff] py-12
+      ${isDS1 ? "ds1-wide" : ""}
+      ${isRobots ? "robots-wide" : ""}
+      ${isAIConscious ? "cosmic-article" : "bg-[#05070b]"}
+    `}
+  >
+
 
     <div className={pageContainerClass}>
 
