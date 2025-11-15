@@ -225,8 +225,10 @@ const headings = article.headings || [];
 const isDS1 = activeArticle === "digital-spirituality-1";
 const isSideLayout = article.layout === "centerWithSides"; // не удаляем: используется в JSX
 const isRobots = activeArticle === "robots-1";
+const isAIConscious = activeArticle === "ai-consciousness-1";
+
 const pageContainerClass =
-  (isDS1 || isSideLayout || isRobots)
+  (isDS1 || isSideLayout || isRobots || isAIConscious)
     ? "article-page"
     : "pl-8 md:pl-16 lg:pl-24 xl:pl-32 pr-8";
 
