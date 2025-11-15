@@ -686,3 +686,22 @@ main > section.site-frame:first-of-type h1 {
     transform: translate3d(-30px, -40px, 0);
   }
 }
+/* ===== AI "Dream" article: continuous text with first-line indent ===== */
+.ai-dream-article .ai-dream-line {
+  text-indent: 1.75rem;    /* красная строка */
+  margin: 0;               /* без внешних отступов между абзацами */
+  padding: 0;
+  line-height: 1.7;
+  color: rgba(228, 249, 255, 0.9);
+}
+
+.ai-dream-article .ai-dream-line + .ai-dream-line {
+  margin-top: 0;           /* не добавляем промежутков между строками */
+}
+
+@media (max-width: 768px) {
+  .ai-dream-article .ai-dream-line {
+    text-indent: 1.25rem;
+    line-height: 1.6;
+  }
+}
