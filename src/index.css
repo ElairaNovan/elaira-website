@@ -184,16 +184,14 @@
 }
 
 #research .card:hover {
-  border-color: rgba(0, 255, 255, 0.75);
-
+  border-color: rgba(41, 214, 255, 0.55);
   box-shadow:
-    0 0 22px rgba(0, 255, 255, 0.55),    /* яркое ближнее свечение */
-    0 0 44px rgba(0, 255, 255, 0.35),    /* средний неон */
-    0 0 90px rgba(0, 255, 255, 0.22),    /* глубокий мягкий свет */
-    inset 0 0 18px rgba(0, 255, 255, 0.18); /* внутреннее сияние */
-    
-  transform: translateY(-3px);
+    0 0 18px rgba(41, 214, 255, 0.35),
+    0 0 36px rgba(41, 214, 255, 0.22),
+    0 0 70px rgba(41, 214, 255, 0.12);
+  transform: translateY(-2px);
 }
+
 
 
 
