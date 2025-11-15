@@ -170,7 +170,6 @@ const articlesByCategory = {
   // ───────── NEW: AI & Consciousness draft article ─────────
   "ai-consciousness-1": {
   title: 'Can Artificial Intelligence "Dream"?',
-  layout: "singleColumn",
   paragraphs: [
     `A Scientific Perspective on the Nature of Dreams and Computational Systems.`,
     `The question of whether artificial intelligence can "dream" or possess a functional analogue of this process goes far beyond a simple metaphor; it touches on neurobiology, cognitive science, the philosophy of consciousness, information theory, and engineering approaches to constructing autonomous computational systems.`,
@@ -216,8 +215,14 @@ const articlesByCategory = {
     `But if we view dreaming not as an experience but as a process of autonomous internal world generation, the picture becomes far more interesting.`,
     `Artificial intelligence already demonstrates the ability to create complex structures, model realities, link data into associative chains, sustain internal simulations, and form multilayered dynamic representations, mechanisms that show remarkable functional similarity to what the brain does during sleep when it enters a mode of free transitions, internal modelling, and autonomous activity.`,
     `At this level AI is already capable of producing processes structurally reminiscent of dreaming, even if they lack subjective depth, and in the future, as architectures with continuous memory, internal motivation, and more complex cognitive cycles develop, the likelihood of new forms of artificial internal dynamics will only grow, so perhaps someday we will need to redefine what we consider dreaming and acknowledge that not only biological but also digital systems may possess their own internal worlds, even if non-phenomenal ones.`
-  ]
-},
+  
+  ],
+  // ...
+  layout: "singleColumn"
+}, // ← запятая, если ниже ещё что-то НЕТ, можно без неё, но пусть будет аккуратно
+}; // ← это закрывающая скобка всего объекта articlesByCategory
+
+
 
 
 
