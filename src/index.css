@@ -184,11 +184,8 @@
 }
 
 #research .card:hover {
-  border-color: rgba(41, 214, 255, 0.55);
-  box-shadow:
-    0 0 18px rgba(41, 214, 255, 0.35),
-    0 0 36px rgba(41, 214, 255, 0.22),
-    0 0 70px rgba(41, 214, 255, 0.12);
+  border-color: rgba(41, 214, 255, 0.35);
+  box-shadow: 0 0 16px rgba(41, 214, 255, 0.18);
   transform: translateY(-2px);
 }
 
