@@ -201,9 +201,6 @@ const articlesByCategory = {
 
 
 
-
-
-
 export default function App() {
   const [activeCategory, setActiveCategory] = useState(null);
   const [activeArticle, setActiveArticle] = useState(null);
