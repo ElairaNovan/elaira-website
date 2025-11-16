@@ -168,7 +168,6 @@ const articlesByCategory = {
   },
 
     // ───────── AI & Consciousness: Can AI Dream? ─────────
- fix-app
 "ai-consciousness-1": {
   title: 'Can Artificial Intelligence "Dream"?',
   paragraphs: [
