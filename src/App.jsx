@@ -185,7 +185,6 @@ const articlesByCategory = {
   ],
   layout: "singleColumn"
 
-
 }, // ← запятая, если ниже ещё что-то НЕТ, можно без неё, но пусть будет аккуратно
 }; // ← это закрывающая скобка всего объекта articlesByCategory
 
@@ -1174,6 +1173,7 @@ const categoryLabel = categoryOfArticle ? categoryOfArticle.replace(/-/g, " ").t
 </div>
   );
 }
+
 
 
 
