@@ -724,13 +724,17 @@ const categoryLabel = categoryOfArticle ? categoryOfArticle.replace(/-/g, " ").t
         html{ scroll-behavior:smooth; }
 
          body{
-    background:
-      radial-gradient(1200px 900px at 10% 0%, rgba(120, 210, 255, 0.18), transparent 70%),
-      radial-gradient(900px 700px at 90% 110%, rgba(0, 220, 200, 0.14), transparent 70%),
-      radial-gradient(1600px 1000px at 50% 40%, rgba(5, 12, 30, 1), #02030a);
-    background-attachment: fixed;
-    color:var(--txt);
-  }
+  background:
+    /* верхнее свечение — слабее и чуть ниже */
+    radial-gradient(1100px 800px at 20% 8%, rgba(90, 180, 230, 0.12), transparent 70%),
+    /* нижнее свечение — тоже приглушаем */
+    radial-gradient(900px 700px at 85% 115%, rgba(0, 180, 190, 0.10), transparent 70%),
+    /* база — очень глубокий тёмно-синий, но не чёрный */
+    radial-gradient(1600px 1000px at 50% 45%, rgba(4, 9, 20, 1), #010208);
+  background-attachment: fixed;
+  color:var(--txt);
+}
+
 
 
         .container{ max-width:1100px; margin-inline:auto; }
@@ -762,19 +766,19 @@ const categoryLabel = categoryOfArticle ? categoryOfArticle.replace(/-/g, " ").t
           border-bottom-right-radius: 12px;
         }
 
-        header{ background:rgba(0,0,0,.25); }
+        header{ background: transparent; }
+
       `}</style>
 
       {/* ====== ШАПКА ====== */}
       <header
-        className="relative z-10"
-        style={{
-          background:
-            "radial-gradient(circle at 50% 120%, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 70%)",
-          paddingTop: "1.5rem",
-          paddingBottom: "1.5rem",
-        }}
-      >
+  className="relative z-10"
+  style={{
+    paddingTop: "1.5rem",
+    paddingBottom: "1.5rem",
+  }}
+>
+
        <div
   className="
     flex flex-col items-center gap-2           /* Было gap-3 → теперь меньше */
