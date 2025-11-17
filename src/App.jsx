@@ -710,7 +710,7 @@ const categoryLabel = categoryOfArticle ? categoryOfArticle.replace(/-/g, " ").t
      3) ГЛАВНАЯ СТРАНИЦА
      ========================= */
   return (
-    <div className="relative z-0 min-h-screen  text-[#f8f9fb] antialiased">
+    <div className="relative z-0 min-h-screen bg-black text-[#f8f9fb] antialiased">
       <style>{`
         :root{
           --bg:#05070b;
@@ -766,7 +766,7 @@ const categoryLabel = categoryOfArticle ? categoryOfArticle.replace(/-/g, " ").t
           border-bottom-right-radius: 12px;
         }
 
-        header{ background: transparent; }
+        
 
       `}</style>
 
@@ -774,10 +774,13 @@ const categoryLabel = categoryOfArticle ? categoryOfArticle.replace(/-/g, " ").t
       <header
   className="relative z-10"
   style={{
+    background:
+      "radial-gradient(circle at 50% 120%, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 70%)",
     paddingTop: "1.5rem",
     paddingBottom: "1.5rem",
   }}
 >
+
 
        <div
   className="
@@ -860,7 +863,7 @@ const categoryLabel = categoryOfArticle ? categoryOfArticle.replace(/-/g, " ").t
       {/* фоновые свечения */}
 <div
   className="pointer-events-none fixed inset-0 z-[-1]"
-  style={{ backgroundColor: "transparent" }}
+  style={{ backgroundColor: "#000" }}
 >
   <div
     style={{
