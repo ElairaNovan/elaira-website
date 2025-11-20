@@ -770,7 +770,8 @@ const categoryLabel = categoryOfArticle ? categoryOfArticle.replace(/-/g, " ").t
 
       `}</style>
 
-      {/* ====== ШАПКА ====== */}
+      {/* ====== ШАПКА TEST ====== */}
+
       <header
   className="relative z-10"
   style={{
