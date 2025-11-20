@@ -960,7 +960,7 @@ const categoryLabel = categoryOfArticle ? categoryOfArticle.replace(/-/g, " ").t
   <p
   className="mt-7 font-light leading-snug max-w-3xl"
   style={{
-    fontSize: "2.1rem",
+    fontSize: "2.0rem",
     color: "#26cfff",
     textShadow: `
       0 0 10px rgba(38,207,255,0.6),
