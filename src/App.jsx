@@ -958,9 +958,9 @@ const categoryLabel = categoryOfArticle ? categoryOfArticle.replace(/-/g, " ").t
 
   {/* НОВЫЙ ПОДЗАГОЛОВОК — с заменой consciousness → awareness */}
   <p
-  className="mt-7 font-light leading-snug max-w-3xl"
+  className="mt-8 font-light leading-snug max-w-3xl"
   style={{
-    fontSize: "1.65rem",
+    fontSize: "2.48rem",
     color: "#26cfff",
     textShadow: `
       0 0 10px rgba(38,207,255,0.6),
