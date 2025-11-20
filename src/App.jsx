@@ -916,16 +916,17 @@ const categoryLabel = categoryOfArticle ? categoryOfArticle.replace(/-/g, " ").t
      <main>
 
         {/* ABOUT / ESSENCE */}
-        <section id="essence" className="mx-auto px-5 md:px-8 pt-28 pb-10 max-w-[1400px]">
+        <section id="essence" className="site-frame pt-28 pb-10">
           <div className="grid gap-6 md:gap-8 grid-cols-1 md:grid-cols-[480px_1fr] xl:grid-cols-[520px_minmax(520px,1fr)] items-start">
             {/* левая колонка: портрет */}
-            <div className="portrait-shell max-w-[480px] xl:max-w-[520px]">
-              <img
-                src={aboutPhoto}
-                alt="Elaira — luminous profile"
-                className="w-full h-[440px] md:h-[520px] object-cover object-[50%_32%]"
-              />
-            </div>
+            <div className="portrait-shell max-w-[480px] xl:max-w-[520px] mt-4 md:mt-6">
+  <img
+    src={aboutPhoto}
+    alt="Elaira — luminous profile"
+    className="w-full h-[440px] md:h-[520px] object-cover object-[50%_32%]"
+  />
+</div>
+
 
           
           {/* ПРАВАЯ КОЛОНКА: текст */}
