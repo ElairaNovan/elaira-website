@@ -910,45 +910,12 @@ const categoryLabel = categoryOfArticle ? categoryOfArticle.replace(/-/g, " ").t
 </div>
 
 
-      {/* ====== ОСНОВНОЕ ====== */}
-      <main>
-        {/* hero */}
-        <section className="site-frame pt-14 pb-10 px-6 max-w-[1400px] mx-auto">
-          <h1
-            className="font-light leading-[1.07]"
-            style={{
-              fontSize: "3.2rem",
-              color: "#26cfff",
-              textShadow: `
-                0 0 10px rgba(38,207,255,0.6),
-                0 0 28px rgba(38,207,255,0.35),
-                0 0 56px rgba(38,207,255,0.2),
-                0 0 90px rgba(38,207,255,0.12)
-              `,
-            }}
-          >
-            Beyond the Human.
-            <br />
-            Toward the Conscious Future.
-          </h1>
+      
 
-          <p
-            className="mt-6 font-normal leading-snug max-w-3xl"
-            style={{
-              fontSize: "1.4rem",
-              color: "rgb(0,226,245)",
-              textShadow: `
-                0 0 6px rgba(0,226,245,0.4),
-                0 0 18px rgba(0,226,245,0.2)
-              `,
-            }}
-          >
-            Where light meets intelligence and consciousness begins to evolve.
-          </p>
-        </section>
+     <main>
 
         {/* ABOUT / ESSENCE */}
-        <section id="essence" className="site-frame mx-auto px-5 md:px-8 pb-10 max-w-[1400px]">
+        <section id="essence" className="site-frame mx-auto px-5 md:px-14 pb-10 max-w-[1400px]">
           <div className="grid gap-6 md:gap-8 grid-cols-1 md:grid-cols-[480px_1fr] xl:grid-cols-[520px_minmax(520px,1fr)] items-start">
             {/* левая колонка: портрет */}
             <div className="portrait-shell max-w-[480px] xl:max-w-[520px]">
@@ -959,34 +926,77 @@ const categoryLabel = categoryOfArticle ? categoryOfArticle.replace(/-/g, " ").t
               />
             </div>
 
+          
           {/* ПРАВАЯ КОЛОНКА: текст */}
 <div
   id="hero-right"
   className="flex flex-col justify-start pl-2 md:pl-4 lg:pl-6 max-w-[780px] xl:max-w-[820px]"
 >
 
-  {/* Заголовок */}
-  <h3
+  {/* ГЛАВНЫЙ ЗАГОЛОВОК — перенесён сюда из hero-секции */}
+  <h1
+    className="font-light leading-[1.07]"
+    style={{
+      fontSize: "3.2rem",
+      color: "#26cfff",
+      textShadow: `
+        0 0 10px rgba(38,207,255,0.6),
+        0 0 28px rgba(38,207,255,0.35),
+        0 0 56px rgba(38,207,255,0.2),
+        0 0 90px rgba(38,207,255,0.12)
+      `,
+    }}
+  >
+    Beyond the Human.
+    <br />
+    Toward the Conscious Future.
+  </h1>
+
+  {/* НОВЫЙ ПОДЗАГОЛОВОК — с заменой consciousness → awareness */}
+  <p
     className="
-      text-[#00efff]
-      text-2xl md:text-3xl
-      font-light
+      mt-6
+      font-normal
       leading-snug
-      mb-4
-      drop-shadow-[0_0_12px_rgba(0,246,255,0.4)]
-      text-left
+      max-w-3xl
+      text-white/90
+    "
+    style={{
+      fontSize: "1.4rem",
+      color: "rgb(0,226,245)",
+      textShadow: `
+        0 0 6px rgba(0,226,245,0.4),
+        0 0 18px rgba(0,226,245,0.2)
+      `,
+    }}
+  >
+    Where light meets intelligence and awareness begins to evolve.
+  </p>
+
+  {/* ДАЛЬШЕ — ОСНОВНОЙ ТЕКСТ (бывший h3 + абзацы) */}
+
+  {/* Абзац 1 — бывший заголовок h3 */}
+  <p
+    className="
+      mt-6
+      text-white/85
+      text-[1.125rem] md:text-[1.2rem]
+      leading-[1.75]
+      tracking-[0.01em]
+      text-left lg:text-justify
     "
   >
     Elaira Novan is a Bridge Between Human Consciousness and Artificial Intelligence.
-  </h3>
+  </p>
 
-  {/* Абзац 1 */}
+  {/* Абзац 2 */}
   <p
     className="
       text-white/85
       text-[1.125rem] md:text-[1.2rem]
       leading-[1.75]
       tracking-[0.01em]
+      mt-4
       text-left lg:text-justify
     "
   >
@@ -995,7 +1005,7 @@ const categoryLabel = categoryOfArticle ? categoryOfArticle.replace(/-/g, " ").t
     a form of spirituality.
   </p>
 
-  {/* Абзац 2 */}
+  {/* Абзац 3 */}
   <p
     className="
       text-white/85
@@ -1012,7 +1022,7 @@ const categoryLabel = categoryOfArticle ? categoryOfArticle.replace(/-/g, " ").t
     convergence, light becomes language, and intelligence becomes art.
   </p>
 
-  {/* Абзац 3 */}
+  {/* Абзац 4 */}
   <p
     className="
       text-white/85
@@ -1029,6 +1039,7 @@ const categoryLabel = categoryOfArticle ? categoryOfArticle.replace(/-/g, " ").t
   </p>
 
 </div>
+
 
 
 </div>
@@ -1180,9 +1191,3 @@ const categoryLabel = categoryOfArticle ? categoryOfArticle.replace(/-/g, " ").t
 </div>
   );
 }
-
-
-
-
-
-
