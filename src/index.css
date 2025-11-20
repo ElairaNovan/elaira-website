@@ -782,7 +782,9 @@ main > section.site-frame:first-of-type h1 {
    ───────────────────────────── */
 
 .nav-chip,
-.nav-chip.is-active {
+.nav-chip.breath-chip,
+.nav-chip.is-active,
+.nav-chip.breath-chip.is-active {
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -794,17 +796,15 @@ main > section.site-frame:first-of-type h1 {
   border-radius: 6px;
   border: 1px solid rgba(190, 235, 255, 0.9);
 
-  /* светящийся прямоугольник как у первой ESSENCE */
   background: radial-gradient(
       circle at 50% 0%,
       rgba(160, 220, 255, 0.35),
       rgba(4, 12, 22, 0.98)
   );
 
-  font-size: 0.8rem;          /* чуть больше, чем было */
+  font-size: 0.8rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-
   color: #f7fbff;
 
   box-shadow:
@@ -823,9 +823,10 @@ main > section.site-frame:first-of-type h1 {
     transform 0.16s ease;
 }
 
-/* hover — лёгкий подъём и чуть больше свечения */
 .nav-chip:hover,
-.nav-chip.is-active:hover {
+.nav-chip.breath-chip:hover,
+.nav-chip.is-active:hover,
+.nav-chip.breath-chip.is-active:hover {
   color: #ffffff;
   border-color: rgba(210, 245, 255, 1);
   box-shadow:
@@ -835,7 +836,7 @@ main > section.site-frame:first-of-type h1 {
   transform: translateY(-1px);
 }
 
-/* breath-chip больше ничего не рисует сам */
+/* breath-chip сам по себе ничего не рисует */
 .breath-chip {
   background: transparent;
   border-radius: inherit;
