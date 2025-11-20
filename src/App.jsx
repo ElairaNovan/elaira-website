@@ -712,63 +712,42 @@ const categoryLabel = categoryOfArticle ? categoryOfArticle.replace(/-/g, " ").t
   return (
     <div className="relative z-0 min-h-screen bg-black text-[#f8f9fb] antialiased">
       <style>{`
-        :root{
-          --bg:#05070b;
-          --panel:rgba(255,255,255,0.02);
-          --line:rgba(255,255,255,0.08);
-          --txt:#f8f9fb;
-          --neon:#00f6ff;
-          --neon-soft:#8eeaff;
-        }
+  :root{
+    --bg:#05070b;
+    --panel:rgba(255,255,255,0.02);
+    --line:rgba(255,255,255,0.08);
+    --txt:#f8f9fb;
+    /* чуть теплее и мягче неон */
+    --neon:#86d4ff;
+    --neon-soft:#5fa5ff;
+  }
 
-        html{ scroll-behavior:smooth; }
+  html{ scroll-behavior:smooth; }
 
-         body{
-  background:
-    /* верхнее свечение — слабее и чуть ниже */
-    radial-gradient(1100px 800px at 20% 8%, rgba(90, 180, 230, 0.12), transparent 70%),
-    /* нижнее свечение — тоже приглушаем */
-    radial-gradient(900px 700px at 85% 115%, rgba(0, 180, 190, 0.10), transparent 70%),
-    /* база — очень глубокий тёмно-синий, но не чёрный */
-    radial-gradient(1600px 1000px at 50% 45%, rgba(4, 9, 20, 1), #010208);
-  background-attachment: fixed;
-  color:var(--txt);
-}
+  body{
+    background:
+      radial-gradient(1100px 800px at 20% 8%, rgba(90, 180, 230, 0.12), transparent 70%),
+      radial-gradient(900px 700px at 85% 115%, rgba(0, 180, 190, 0.10), transparent 70%),
+      radial-gradient(1600px 1000px at 50% 45%, rgba(4, 9, 20, 1), #010208);
+    background-attachment: fixed;
+    color:var(--txt);
+    /* явное, но аккуратное указание шрифта по всему сайту */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  }
 
+  .container{ max-width:1100px; margin-inline:auto; }
 
+  /* общий неон — мягче свечение */
+  .neon{
+    color:var(--neon);
+    text-shadow:
+      0 0 8px rgba(134,212,255,.45),
+      0 0 18px rgba(134,212,255,.25);
+  }
+`}
+</style>
 
-        .container{ max-width:1100px; margin-inline:auto; }
-        .neon{ color:var(--neon); text-shadow:0 0 12px rgba(0,246,255,.60); }
-
-        .card{
-          background:var(--panel);
-          border:1px solid var(--line);
-          border-radius:20px;
-          transition:box-shadow .25s ease, transform .25s ease;
-        }
-        .card:hover{ box-shadow:0 0 24px rgba(0,246,255,.18); transform:translateY(-2px); }
-
-        .aboutCard::after {
-          content: "";
-          position: absolute;
-          right: 12px;
-          top: 10px;
-          bottom: 10px;
-          width: 24px;
-          background: linear-gradient(90deg,
-            rgba(0,246,255,.16),
-            rgba(0,246,255,0));
-          filter: blur(10px);
-          opacity: .18;
-          mix-blend-mode: screen;
-          pointer-events: none;
-          border-top-right-radius: 12px;
-          border-bottom-right-radius: 12px;
-        }
-
-        
-
-      `}</style>
 
       {/* ====== ШАПКА TEST ====== */}
 

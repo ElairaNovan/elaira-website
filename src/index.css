@@ -126,37 +126,43 @@
 /* =============================
    Manifest
    ============================= */
-.manifest-label {
-  color: #29d6ff;
-  font-size: 1.35rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  margin-bottom: 1.2rem;
-  font-weight: 600;
-  text-shadow: 0 0 10px rgba(38, 207, 255, 0.35), 0 0 20px rgba(38, 207, 255, 0.15);
-}
-.manifest-title {
-  color: #29d6ff;
-  font-size: 1.9rem;
-  line-height: 1.25;
-  font-weight: 300;
-  margin-bottom: 1.2rem;
-  text-shadow: 0 0 10px rgba(38, 207, 255, 0.45), 0 0 20px rgba(38, 207, 255, 0.25);
-}
-.manifest-body {
-  color: rgba(200, 240, 255, 0.9);
-  font-size: 1.27rem;
-  line-height: 1.65;
-  margin-bottom: 1.2rem;
-  text-align: justify;
-  text-justify: inter-word;
-}
-.manifest-foot {
-  color: rgba(180, 245, 255, 0.78);
-  font-style: italic;
-  font-size: 1.2rem;
-  margin-top: 0.8rem;
-}
+  .manifest-wrap{
+    max-width:1100px;
+    margin:0 auto;
+    padding:3.5rem 1.25rem 3.25rem;
+  }
+
+  .manifest-label{
+    font-size:0.75rem;
+    letter-spacing:0.32em;
+    text-transform:uppercase;
+    color:var(--neon-soft);
+    margin-bottom:1.2rem;
+  }
+
+  .manifest-title{
+    font-size:1.45rem;
+    letter-spacing:0.24em;
+    text-transform:uppercase;
+    font-weight:300;
+    color:#e6f0ff;
+    margin-bottom:1.6rem;
+  }
+
+  .manifest-body{
+    font-size:0.98rem;
+    line-height:1.8;
+    color:rgba(230,240,255,0.86);
+    max-width:780px;
+  }
+
+  .manifest-foot{
+    margin-top:1.75rem;
+    font-size:0.9rem;
+    font-style:italic;
+    color:rgba(182,210,255,0.9);
+  }
+
 
 /* =============================
    Research Area cards
