@@ -918,7 +918,8 @@ const categoryLabel = categoryOfArticle ? categoryOfArticle.replace(/-/g, " ").t
        {/* ABOUT / ESSENCE */}
 <section id="essence" className="site-frame pt-28 pb-10">
   {/* ЦЕНТРАЛЬНЫЙ ГЛАВНЫЙ ЗАГОЛОВОК */}
-  <div className="max-w-[1100px] mx-auto px-5 mb-10 text-center">
+  <div className="max-w-[1100px] mx-auto px-5 mb-24 text-center">
+
     <h1
       className="
         text-[2rem] md:text-[2.6rem] lg:text-[3rem]
