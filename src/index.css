@@ -718,83 +718,70 @@ main > section.site-frame:first-of-type h1 {
 
 
 
-/* ───── Верхняя навигация: ледяные текстовые табы ───── */
+/* ───── Верхняя навигация: стеклянные капсулы ───── */
+
 .nav-chip {
   position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
 
-  padding-bottom: 0.4rem;
+  min-width: 120px;
+  padding: 0.55rem 1.4rem;
+
+  border-radius: 9999px;
+  border: 1px solid rgba(140, 190, 230, 0.28);
+  background: radial-gradient(circle at 50% 0%,
+      rgba(140, 200, 255, 0.14),
+      rgba(3, 10, 20, 0.96)
+  );
 
   font-size: 0.7rem;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
 
-  /* базовый текст — спокойный холодный */
-  color: rgba(159, 179, 217, 0.9);
+  color: rgba(214, 228, 255, 0.86);
 
+  box-shadow:
+    0 0 18px rgba(0, 0, 0, 0.85),
+    0 0 18px rgba(90, 160, 215, 0.22);
   text-decoration: none;
+  opacity: 0.95;
+
   transition:
     color 0.22s ease,
+    border-color 0.22s ease,
+    box-shadow 0.22s ease,
+    background 0.22s ease,
     opacity 0.22s ease;
-  opacity: 0.85;
 }
 
-/* обводка и фон старого варианта выключаем через breath-chip */
+/* breath-chip больше не отвечает за свечение — просто оставим его "тихим" */
 .breath-chip {
-  border-radius: 0;
-  border: none;
   background: transparent;
+  border-radius: inherit;
   box-shadow: none;
 }
 
-/* ледяная линия снизу — по умолчанию почти невидима */
-.nav-chip::after {
-  content: "";
-  position: absolute;
-  left: 18%;
-  right: 18%;
-  bottom: 0;
-
-  height: 2px;
-  border-radius: 999px;
-
-  background: linear-gradient(
-    90deg,
-    rgba(134, 212, 255, 0.0),
-    rgba(190, 225, 255, 0.8),
-    rgba(134, 212, 255, 0.0)
-  );
-
-  opacity: 0;
-  transform: scaleX(0.4);
-  transform-origin: center;
-  transition:
-    opacity 0.22s ease,
-    transform 0.22s ease;
-}
-
-/* hover — текст светлее, линия проявляется */
+/* Hover: чуть светлее текст и подсветка, но без агрессивного неона */
 .nav-chip:hover {
-  color: #e6f1ff;
+  color: #f2f6ff;
+  border-color: rgba(170, 215, 255, 0.65);
+  box-shadow:
+    0 0 20px rgba(0, 0, 0, 0.9),
+    0 0 22px rgba(130, 190, 255, 0.38);
   opacity: 1;
 }
 
-.nav-chip:hover::after {
-  opacity: 0.9;
-  transform: scaleX(1);
-}
-
-/* активный пункт (по activeSection) — подсвечён постоянно */
-.nav-chip.is-active,
-.nav-chip.is-active:hover {
-  color: #e9f3ff;
-  opacity: 1;
-}
-
-.nav-chip.is-active::after {
-  opacity: 1;
-  transform: scaleX(1);
-  box-shadow: 0 0 12px rgba(180, 220, 255, 0.7);
+/* Активная вкладка (по классу is-active) */
+.nav-chip.is-active {
+  color: #ffffff;
+  border-color: rgba(195, 230, 255, 0.95);
+  background: radial-gradient(circle at 50% 15%,
+      rgba(180, 225, 255, 0.33),
+      rgba(5, 14, 28, 0.98)
+  );
+  box-shadow:
+    0 0 24px rgba(0, 0, 0, 0.95),
+    0 0 28px rgba(160, 220, 255, 0.55);
 }
