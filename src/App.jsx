@@ -918,16 +918,17 @@ const categoryLabel = categoryOfArticle ? categoryOfArticle.replace(/-/g, " ").t
     </h1>
 
     <p
-      className="
-        mt-4
-        text-[0.7rem] md:text-[0.8rem]
-        tracking-[0.32em]
-        uppercase
-        text-[#9fb3d9]
-      "
-    >
-      WHERE LIGHT MEETS INTELLIGENCE AND AWARENESS BEGINS TO EVOLVE.
-    </p>
+  className="
+    mt-4
+    text-[0.75rem] md:text-[0.88rem]
+    tracking-[0.32em]
+    uppercase
+    text-[#9fb3d9]
+  "
+>
+  WHERE LIGHT MEETS INTELLIGENCE AND AWARENESS BEGINS TO EVOLVE.
+</p>
+
   </div>
 
   {/* СЕТКА: ПОРТРЕТ + ТЕКСТ */}
