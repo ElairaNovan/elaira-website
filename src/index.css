@@ -718,7 +718,7 @@ main > section.site-frame:first-of-type h1 {
 
 
 
-/* ───── Верхняя навигация: единый стиль для всех кнопок ───── */
+/* ───── Верхняя навигация: все кнопки как прежняя "активная" ───── */
 
 .nav-chip {
   position: relative;
@@ -730,22 +730,23 @@ main > section.site-frame:first-of-type h1 {
   padding: 0.55rem 1.4rem;
 
   border-radius: 9999px;
-  border: 1px solid rgba(195, 230, 255, 0.85); /* почти как активная, но чуть мягче */
+  border: 1px solid rgba(195, 230, 255, 0.95);
 
-  background: radial-gradient(circle at 50% 15%,
-      rgba(180, 225, 255, 0.26),   /* было ~0.33 → сделали немного мягче */
-      rgba(5, 14, 28, 0.98)
+  /* такой же светящийся фон, как у первой кнопки раньше */
+  background: radial-gradient(
+    circle at 50% 15%,
+    rgba(180, 225, 255, 0.33),   /* ядро свечения */
+    rgba(5, 14, 28, 0.98)        /* почти чёрный, но не совсем */
   );
 
-  font-size: 0.78rem;               /* было 0.7rem → слегка увеличили */
+  font-size: 0.78rem;            /* чуть крупнее текста */
   letter-spacing: 0.18em;
   text-transform: uppercase;
-
-  color: #f0f4ff;
+  color: #f7fbff;
 
   box-shadow:
-    0 0 22px rgba(0, 0, 0, 0.95),
-    0 0 24px rgba(160, 220, 255, 0.40); /* яркость свечения тоже чуть снизили */
+    0 0 24px rgba(0, 0, 0, 0.95),
+    0 0 28px rgba(160, 220, 255, 0.55);  /* яркое, но контролируемое свечение */
 
   text-decoration: none;
   opacity: 0.98;
@@ -759,23 +760,20 @@ main > section.site-frame:first-of-type h1 {
     transform 0.18s ease;
 }
 
-/* hover — просто немного «оживает», без дикой яркости */
+/* лёгкий "подскок" и чуть сильнее свечение при наведении */
 .nav-chip:hover {
   color: #ffffff;
-  border-color: rgba(210, 238, 255, 0.95);
+  border-color: rgba(215, 240, 255, 1);
   box-shadow:
-    0 0 24px rgba(0, 0, 0, 0.98),
-    0 0 28px rgba(175, 230, 255, 0.52);
+    0 0 28px rgba(0, 0, 0, 0.98),
+    0 0 34px rgba(175, 230, 255, 0.70);
   opacity: 1;
   transform: translateY(-1px);
 }
 
-/* breath-chip оставляем тихим, он только для совместимости */
+/* breath-chip оставляем только как "пустую оболочку", чтобы не мешался */
 .breath-chip {
   background: transparent;
   border-radius: inherit;
   box-shadow: none;
 }
-
-/* Если позже захочешь особый акцент для активной — добавим свойства здесь */
-
