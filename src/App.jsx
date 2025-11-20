@@ -933,8 +933,9 @@ const categoryLabel = categoryOfArticle ? categoryOfArticle.replace(/-/g, " ").t
           {/* ПРАВАЯ КОЛОНКА: текст */}
 <div
   id="hero-right"
-  className="flex flex-col justify-start pl-2 md:pl-4 lg:pl-6 max-w-[780px] xl:max-w-[820px]"
+  className="flex flex-col justify-start pl-2 md:pl-4 lg:pl-6 max-w-[780px] xl:max-w-[820px] mt-2 md:mt-4"
 >
+
 
   {/* ГЛАВНЫЙ ЗАГОЛОВОК — перенесён сюда из hero-секции */}
   <h1
