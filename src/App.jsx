@@ -971,9 +971,8 @@ const categoryLabel = categoryOfArticle ? categoryOfArticle.replace(/-/g, " ").t
     `,
   }}
 >
-  Where light meets intelligence
-  <br />
-  and awareness begins to evolve.
+  Where light meets intelligence and awareness begins to evolve.
+ 
 </p>
 
 
