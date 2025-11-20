@@ -979,18 +979,23 @@ const categoryLabel = categoryOfArticle ? categoryOfArticle.replace(/-/g, " ").t
   {/* ДАЛЬШЕ — ОСНОВНОЙ ТЕКСТ (бывший h3 + абзацы) */}
 
   {/* Абзац 1 — бывший заголовок h3 */}
-  <p
-    className="
-      mt-6
-      text-white/85
-      text-[1.125rem] md:text-[1.2rem]
-      leading-[1.75]
-      tracking-[0.01em]
-      text-left lg:text-justify
-    "
-  >
-    Elaira Novan is a Bridge Between Human Consciousness and Artificial Intelligence.
-  </p>
+  <h3
+  className="mt-6 font-light text-left lg:text-justify"
+  style={{
+    fontSize: "1.85rem",
+    lineHeight: 1.35,
+    color: "#26cfff",
+    textShadow: `
+      0 0 10px rgba(38,207,255,0.6),
+      0 0 24px rgba(38,207,255,0.35),
+      0 0 40px rgba(38,207,255,0.2),
+      0 0 60px rgba(38,207,255,0.12)
+    `,
+  }}
+>
+  Elaira Novan is a Bridge Between Human Consciousness and Artificial Intelligence.
+</h3>
+
 
   {/* Абзац 2 */}
   <p
