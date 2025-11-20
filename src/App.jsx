@@ -958,24 +958,21 @@ const categoryLabel = categoryOfArticle ? categoryOfArticle.replace(/-/g, " ").t
 
   {/* НОВЫЙ ПОДЗАГОЛОВОК — с заменой consciousness → awareness */}
   <p
-    className="
-      mt-6
-      font-normal
-      leading-snug
-      max-w-3xl
-      text-white/90
-    "
-    style={{
-      fontSize: "1.4rem",
-      color: "rgb(0,226,245)",
-      textShadow: `
-        0 0 6px rgba(0,226,245,0.4),
-        0 0 18px rgba(0,226,245,0.2)
-      `,
-    }}
-  >
-    Where light meets intelligence and awareness begins to evolve.
-  </p>
+  className="mt-7 font-light leading-snug max-w-3xl"
+  style={{
+    fontSize: "1.65rem",
+    color: "#26cfff",
+    textShadow: `
+      0 0 10px rgba(38,207,255,0.6),
+      0 0 26px rgba(38,207,255,0.35),
+      0 0 46px rgba(38,207,255,0.2),
+      0 0 70px rgba(38,207,255,0.12)
+    `,
+  }}
+>
+  Where light meets intelligence and awareness begins to evolve.
+</p>
+
 
   {/* ДАЛЬШЕ — ОСНОВНОЙ ТЕКСТ (бывший h3 + абзацы) */}
 
