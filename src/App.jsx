@@ -782,13 +782,14 @@ const categoryLabel = categoryOfArticle ? categoryOfArticle.replace(/-/g, " ").t
   />
 
   {/* меню */}
-  <nav
-    aria-label="Primary"
-    className="
-      w-full grid grid-cols-2 gap-3 mt-3      /* MOBILE: 2 колонки на всю ширину */
-      md:w-auto md:mt-0 md:flex md:flex-row md:gap-3  /* DESKTOP: строка как раньше */
-    "
-  >
+ <nav
+  aria-label="Primary"
+  className="
+    w-full grid grid-cols-2 gap-4 mt-3
+    md:w-auto md:mt-0 md:flex md:flex-row md:gap-5
+  "
+>
+
     <a
   href="#essence"
   className={`
