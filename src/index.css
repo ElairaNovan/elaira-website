@@ -874,9 +874,7 @@ main > section.site-frame:first-of-type h1 {
   overflow: hidden;
 
   
-  box-shadow:
-    0 0 26px rgba(0, 0, 0, 0.9),
-    0 0 34px rgba(0, 40, 70, 0.7);
+ 
 
   min-height: 360px;
   background:
