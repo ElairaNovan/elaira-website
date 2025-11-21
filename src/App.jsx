@@ -957,7 +957,7 @@ const categoryLabel = categoryOfArticle ? categoryOfArticle.replace(/-/g, " ").t
   className="
     mb-4
     text-[0.8rem] md:text-[0.86rem]
-    tracking-[0.18em]
+    tracking-[0.14em]
     uppercase
     text-[#b9c9e8]
   "
