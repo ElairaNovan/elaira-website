@@ -842,3 +842,9 @@ main > section.site-frame:first-of-type h1 {
   border-radius: inherit;
   box-shadow: none;
 }
+/* ABOUT intro: не растягиваем первую строку, чтобы не рвать слова */
+#hero-right > p:first-of-type {
+  text-align: left !important;
+  text-justify: auto !important;
+  word-spacing: normal !important;
+}
