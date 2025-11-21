@@ -855,8 +855,21 @@ main > section.site-frame:first-of-type h1 {
 
 .about-hero-panel {
   position: relative;
-  border-radius: 1.3rem;
+
+  /* шире, почти на всю ширину site-frame */
+  max-width: 1440px;
+  margin: 0 auto 3rem;
+
+  /* тот же внутренний отступ по вкусу, можно потом подстроить */
+  padding: 2.5rem 3rem;
+
+  /* острые края, как мы и планировали (вариант B) */
+  border-radius: 0;
+
   overflow: hidden;
+  /* ...остальные строки (background, box-shadow и т.д.) оставляем как были... */
+
+
 
   border: 1px solid rgba(0, 220, 255, 0.14);
   box-shadow:
