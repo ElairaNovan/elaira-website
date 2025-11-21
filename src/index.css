@@ -856,20 +856,18 @@ main > section.site-frame:first-of-type h1 {
 .about-hero-panel {
   position: relative;
 
-  /* шире, почти на всю ширину site-frame */
+  /* БАЗА: панель на всю ширину контейнера */
+  width: 100%;
   max-width: 1440px;
   margin: 0 auto 3rem;
 
-  /* тот же внутренний отступ по вкусу, можно потом подстроить */
+  /* внутренняя «рамка воздуха» вокруг текста и изображения */
   padding: 2.5rem 3rem;
 
   /* острые края, как мы и планировали (вариант B) */
   border-radius: 0;
 
   overflow: hidden;
-  /* ...остальные строки (background, box-shadow и т.д.) оставляем как были... */
-
-
 
   border: 1px solid rgba(0, 220, 255, 0.14);
   box-shadow:
@@ -881,6 +879,16 @@ main > section.site-frame:first-of-type h1 {
     radial-gradient(120% 140% at 10% 0%, rgba(10, 70, 120, 0.35), transparent 60%),
     radial-gradient(130% 150% at 85% 100%, rgba(0, 120, 135, 0.28), transparent 65%),
     radial-gradient(160% 120% at 50% 50%, #020812, #000104);
+}
+
+/* ДЕСКТОП: делаем плакат шире site-frame и ближе к краям окна */
+@media (min-width: 1024px) {
+  .about-hero-panel {
+    /* расширяем шире контейнера site-frame */
+    width: calc(100% + 1.5rem);
+    /* выносим панель за края контейнера на 0.75rem с каждой стороны */
+    margin: 0 -0.75rem 3rem;
+  }
 }
 
 /* Слой с картинкой */
