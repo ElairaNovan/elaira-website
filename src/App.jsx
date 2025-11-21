@@ -934,19 +934,15 @@ const categoryLabel = categoryOfArticle ? categoryOfArticle.replace(/-/g, " ").t
   <div className="w-full flex justify-center">
     <div
       className="
+      
         about-hero-panel
         relative
         w-full
-        max-w-[1300px]
         h-[330px] md:h-[380px] lg:h-[420px]
-        overflow-hidden           /* острые края — как мы хотели */
-        border border-[rgba(120,190,255,0.32)]
-        shadow-[0_0_40px_rgba(0,0,0,0.85),0_0_60px_rgba(40,140,255,0.45)]
-        bg-[radial-gradient(circle_at_0%_0%,rgba(120,190,255,0.22),transparent_55%),radial-gradient(circle_at_100%_100%,rgba(0,110,190,0.4),transparent_60%),linear-gradient(135deg,rgba(4,10,22,0.96),rgba(2,4,10,0.98))]
-        px-6 md:px-12 lg:px-16
         flex items-stretch
       "
-    >
+>
+
 
       {/* Фоновой портрет */}
       <div className="about-hero-bg absolute inset-0">
