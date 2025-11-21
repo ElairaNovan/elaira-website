@@ -874,9 +874,7 @@ main > section.site-frame:first-of-type h1 {
   min-height: 360px;
 
   background:
-    radial-gradient(120% 140% at 10% 0%, rgba(10, 70, 120, 0.35), transparent 60%),
-    radial-gradient(130% 150% at 85% 100%, rgba(0, 120, 135, 0.28), transparent 65%),
-    radial-gradient(160% 120% at 50% 50%, #020812, #000104);
+    transparent;
 }
 
 
