@@ -956,14 +956,17 @@ const categoryLabel = categoryOfArticle ? categoryOfArticle.replace(/-/g, " ").t
   <p
   className="
     mb-4
-    text-[0.8rem] md:text-[0.86rem]
-    tracking-[0.14em]
+    text-[0.8rem] md:text-[0.9rem]
+    tracking-[0.12em]
     uppercase
     text-[#b9c9e8]
+    text-left
   "
+  style={{ textAlign: "left" }}
 >
   ELAIRA NOVAN IS A BRIDGE BETWEEN HUMAN CONSCIOUSNESS AND ARTIFICIAL INTELLIGENCE.
 </p>
+
 
 
   {/* Основной текст — мягкий, читабельный, чуть меньше, чем большой хиро */}
