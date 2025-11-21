@@ -954,16 +954,17 @@ const categoryLabel = categoryOfArticle ? categoryOfArticle.replace(/-/g, " ").t
 >
   {/* Маленький капс-интро, как фирменная строка */}
   <p
-    className="
-      mb-4
-      text-[0.8rem] md:text-[0.86rem]
-      tracking-[0.26em]
-      uppercase
-      text-[#b9c9e8]
-    "
-  >
-    ELAIRA NOVAN IS A BRIDGE BETWEEN HUMAN CONSCIOUSNESS AND ARTIFICIAL INTELLIGENCE.
-  </p>
+  className="
+    mb-4
+    text-[0.8rem] md:text-[0.86rem]
+    tracking-[0.18em]
+    uppercase
+    text-[#b9c9e8]
+  "
+>
+  ELAIRA NOVAN IS A BRIDGE BETWEEN HUMAN CONSCIOUSNESS AND ARTIFICIAL INTELLIGENCE.
+</p>
+
 
   {/* Основной текст — мягкий, читабельный, чуть меньше, чем большой хиро */}
   <p
