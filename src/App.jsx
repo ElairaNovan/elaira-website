@@ -37,7 +37,6 @@ const ENFullLogo = ({ className = "flex flex-col items-center gap-2" }) => (
             <stop offset="100%" stopColor="#001019" stopOpacity="0" />
           </radialGradient>
 
-          {/* НОВЫЙ фильтр для маленькой светящейся точки на конце луча */}
           <filter id="glowDot">
             <feGaussianBlur stdDeviation="1.8" result="coloredBlur" />
             <feMerge>
@@ -47,8 +46,10 @@ const ENFullLogo = ({ className = "flex flex-col items-center gap-2" }) => (
           </filter>
         </defs>
 
+        {/* Сияние у NOVAN */}
         <circle cx="70" cy="8" r="9" fill="url(#enGlow)" />
 
+        {/* Луч */}
         <line
           x1="18"
           y1="30"
@@ -59,8 +60,15 @@ const ENFullLogo = ({ className = "flex flex-col items-center gap-2" }) => (
           strokeLinecap="round"
         />
 
-        {/* ⭐ МАЛЕНЬКАЯ СВЕТЯЩАЯСЯ ТОЧКА НА КОНЦЕ ЛУЧА */}
-        <circle cx="70" cy="8" r="2.2" fill="#EFFFFF" filter="url(#glowDot)" />
+        {/* ⭐ Вытянутая светящаяся точка (сильно вытянута) */}
+        <ellipse
+          cx="70"
+          cy="8"
+          rx="5.5"
+          ry="1.4"
+          fill="#EFFFFF"
+          filter="url(#glowDot)"
+        />
       </svg>
 
       <div className="en-logo-text leading-tight">
@@ -70,6 +78,7 @@ const ENFullLogo = ({ className = "flex flex-col items-center gap-2" }) => (
     </div>
   </div>
 );
+
 
 
 
