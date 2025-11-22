@@ -17,11 +17,11 @@ const inlineImages = {
 /* ===== ПОЛНЫЙ ЛОГОТИП (Elaira Novan) ===== */
 const ENFullLogo = ({ className = "flex flex-col items-center gap-2" }) => (
   <div className={className}>
-    <div className="relative flex items-center gap-0.5 md:gap-1">
+    <div className="relative flex items-center gap-0 md:gap-0">
       {/* Луч света */}
       <svg
         viewBox="0 0 120 40"
-        className="w-[80px] md:w-[96px] -mr-1 select-none pointer-events-none"
+        className="w-[80px] md:w-[96px] select-none pointer-events-none"
         aria-label="Elaira Novan light logo"
       >
         <defs>
@@ -58,6 +58,7 @@ const ENFullLogo = ({ className = "flex flex-col items-center gap-2" }) => (
     </div>
   </div>
 );
+
 
 
 
