@@ -18,6 +18,7 @@ const inlineImages = {
 const ENFullLogo = ({ className = "flex flex-col items-center gap-2" }) => (
   <div className={className}>
     <div className="relative flex items-center gap-0 md:gap-0">
+
       {/* Луч света */}
       <svg
         viewBox="0 0 120 40"
@@ -48,7 +49,6 @@ const ENFullLogo = ({ className = "flex flex-col items-center gap-2" }) => (
         </defs>
 
         <circle cx="70" cy="8" r="9" fill="url(#enGlow)" />
-
         <line
           x1="18"
           y1="30"
@@ -61,17 +61,6 @@ const ENFullLogo = ({ className = "flex flex-col items-center gap-2" }) => (
 
         {/* ⭐ МАЛЕНЬКАЯ СВЕТЯЩАЯСЯ ТОЧКА НА КОНЦЕ ЛУЧА */}
         <circle cx="70" cy="8" r="2.2" fill="#EFFFFF" filter="url(#glowDot)" />
-
-        {/* ✨ ЛЁГКОЕ СВЕЧЕНИЕ / ХВОСТ КОМЕТЫ ПОСЛЕ ТОЧКИ */}
-        <ellipse
-          cx="74"
-          cy="6.5"
-          rx="4"
-          ry="1.6"
-          fill="#EFFFFF"
-          fillOpacity="0.35"
-          filter="url(#glowDot)"
-        />
       </svg>
 
       <div className="en-logo-text leading-tight">
@@ -81,7 +70,6 @@ const ENFullLogo = ({ className = "flex flex-col items-center gap-2" }) => (
     </div>
   </div>
 );
-
 
 
 
