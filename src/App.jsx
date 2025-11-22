@@ -20,11 +20,12 @@ const ENFullLogo = ({ className = "flex flex-col items-center gap-2" }) => (
     <div className="relative flex items-center gap-0 md:gap-0">
 
       {/* Луч света */}
-      <svg
-        viewBox="0 0 120 40"
-        className="w-[86px] md:w-[104px] select-none pointer-events-none"
-        aria-label="Elaira Novan light logo"
-      >
+     <svg
+  viewBox="0 0 120 40"
+  className="w-[92px] md:w-[112px] select-none pointer-events-none"
+  style={{ filter: "drop-shadow(0 0 3px rgba(200,240,255,0.35))" }}
+  aria-label="Elaira Novan light logo"
+>
         <defs>
           <linearGradient id="enBeam" x1="0%" y1="100%" x2="100%" y2="0%">
             <stop offset="0%" stopColor="#6CCBFF" stopOpacity="0.58" />
