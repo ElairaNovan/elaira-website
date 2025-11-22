@@ -764,14 +764,15 @@ const categoryLabel = categoryOfArticle ? categoryOfArticle.replace(/-/g, " ").t
 
        <div
   className="
-    flex flex-col items-center gap-2           /* Было gap-3 → теперь меньше */
+    flex flex-col items-center gap-2
     max-w-[1400px]
     mx-auto
     px-6
-    pt-4                                      /* Было pt-8 → теперь выше */
-    md:flex-row md:items-start md:justify-between md:gap-3 md:pt-8
+    pt-4
+    md:flex-row md:items-start md:gap-3 md:pt-8
   "
 >
+
 
   {/* логотип */}
   <ENFullLogo
@@ -787,9 +788,10 @@ const categoryLabel = categoryOfArticle ? categoryOfArticle.replace(/-/g, " ").t
   className="
     w-full grid grid-cols-2 gap-4 mt-3
     md:w-auto md:mt-0 md:flex md:flex-row md:gap-5
-    md:ml-auto md:pr-4
+    md:ml-auto
   "
 >
+
 
 
 
