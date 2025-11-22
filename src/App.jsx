@@ -61,6 +61,17 @@ const ENFullLogo = ({ className = "flex flex-col items-center gap-2" }) => (
 
         {/* ⭐ МАЛЕНЬКАЯ СВЕТЯЩАЯСЯ ТОЧКА НА КОНЦЕ ЛУЧА */}
         <circle cx="70" cy="8" r="2.2" fill="#EFFFFF" filter="url(#glowDot)" />
+
+        {/* ✨ ЛЁГКОЕ СВЕЧЕНИЕ / ХВОСТ КОМЕТЫ ПОСЛЕ ТОЧКИ */}
+        <ellipse
+          cx="74"
+          cy="6.5"
+          rx="4"
+          ry="1.6"
+          fill="#EFFFFF"
+          fillOpacity="0.35"
+          filter="url(#glowDot)"
+        />
       </svg>
 
       <div className="en-logo-text leading-tight">
@@ -70,6 +81,7 @@ const ENFullLogo = ({ className = "flex flex-col items-center gap-2" }) => (
     </div>
   </div>
 );
+
 
 
 
