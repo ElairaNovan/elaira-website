@@ -18,39 +18,10 @@ const inlineImages = {
 const ENFullLogo = ({ className = "flex flex-col items-center gap-2" }) => (
   <div className={className}>
     <div className="relative flex items-center justify-center">
-      <svg
-        viewBox="0 0 120 40"
-        className="w-[150px] md:w-[170px] select-none pointer-events-none"
-        aria-label="Elaira Novan logo"
-      >
-        <defs>
-          <linearGradient id="enStroke" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#E4F9FF" stopOpacity="0.9" />
-            <stop offset="50%" stopColor="#BEE7FF" stopOpacity="0.95" />
-            <stop offset="100%" stopColor="#7FD4FF" stopOpacity="0.9" />
-          </linearGradient>
-        </defs>
-
-       <g
-  stroke="url(#enStroke)"
-  strokeWidth="1.7"
-  strokeLinecap="round"
-  strokeLinejoin="round"
-  fill="none"
->
-  {/* E — только верх и низ + намёк на середину */}
-  <path d="M14 8 L32 8" />
-  <path d="M14 32 L32 32" />
-  <path d="M14 8 L14 32" />
-  <path d="M14 20 L24 20" />
-
-  {/* N — чуть более узкая и высокая */}
-  <path d="M54 32 L54 8" />
-  <path d="M54 8 L80 32" />
-  <path d="M80 32 L80 8" />
-</g>
-
-      </svg>
+      <div className="en-wordmark">
+        <span className="en-wordmark-main">ELAIRA</span>
+        <span className="en-wordmark-sub">NOVAN</span>
+      </div>
     </div>
   </div>
 );
