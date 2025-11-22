@@ -765,13 +765,15 @@ const categoryLabel = categoryOfArticle ? categoryOfArticle.replace(/-/g, " ").t
        <div
   className="
     flex flex-col items-center gap-2
+    w-full
     max-w-[1400px]
     mx-auto
     px-6
     pt-4
-    md:flex-row md:items-start md:gap-3 md:pt-8
+    md:flex-row md:items-start md:justify-between md:gap-3 md:pt-8
   "
 >
+
 
 
   {/* логотип */}
