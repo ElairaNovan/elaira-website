@@ -970,30 +970,38 @@ main > section.site-frame:first-of-type h1 {
   gap: 0.08rem;
 }
 
+/* ELAIRA — основной кристаллический знак */
 .en-logo-main {
   font-size: 0.78rem;
-  letter-spacing: 0.32em;
+  letter-spacing: 0.34em;                /* +чуть-чуть воздуха */
   text-transform: uppercase;
-  color: #e6f4ff;
-  opacity: 0.9;
+  color: #edf7ff;                        /* светлее и чище */
+  opacity: 0.98;
+  text-shadow:
+    0 0 6px rgba(215, 240, 255, 0.65),
+    0 0 14px rgba(150, 215, 255, 0.45);  /* Crystal Glow */
 }
 
+/* NOVAN — чуть тише, но тоже с лёгким сиянием */
 .en-logo-sub {
   font-size: 0.62rem;
-  letter-spacing: 0.28em;
+  letter-spacing: 0.30em;                /* +микро трекинг */
   text-transform: uppercase;
-  color: rgba(170, 206, 235, 0.85);
+  color: rgba(184, 214, 236, 0.9);
+  text-shadow:
+    0 0 4px rgba(190, 225, 255, 0.45),
+    0 0 10px rgba(120, 190, 235, 0.35);
 }
 
 /* чуть уменьшаем логотип на очень узких экранах */
 @media (max-width: 480px) {
   .en-logo-main {
     font-size: 0.7rem;
-    letter-spacing: 0.26em;
+    letter-spacing: 0.28em;              /* чтобы и тут было чуть свободнее */
   }
 
   .en-logo-sub {
     font-size: 0.58rem;
-    letter-spacing: 0.22em;
+    letter-spacing: 0.24em;
   }
 }

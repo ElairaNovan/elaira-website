@@ -22,23 +22,43 @@ const ENFullLogo = ({ className = "flex flex-col items-center gap-2" }) => (
       {/* Луч света */}
       <svg
         viewBox="0 0 120 40"
-        className="w-[80px] md:w-[96px] select-none pointer-events-none"
+        className="w-[86px] md:w-[104px] select-none pointer-events-none"
         aria-label="Elaira Novan light logo"
       >
         <defs>
           <linearGradient id="enBeam" x1="0%" y1="100%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="#6CCBFF" stopOpacity="0.45" />
-            <stop offset="45%" stopColor="#BDE7FF" stopOpacity="0.85" />
-            <stop offset="100%" stopColor="#EFFFFF" stopOpacity="1" />
+            <stop offset="0%" stopColor="#6CCBFF" stopOpacity="0.58" />
+            <stop offset="45%" stopColor="#C8ECFF" stopOpacity="0.96" />
+            <stop offset="100%" stopColor="#F4FFFF" stopOpacity="1" />
           </linearGradient>
 
           <radialGradient id="enGlow" cx="100%" cy="0%" r="40%">
-            <stop offset="0%" stopColor="#EFFFFF" stopOpacity="0.9" />
-            <stop offset="40%" stopColor="#9EDFFF" stopOpacity="0.5" />
+            <stop offset="0%" stopColor="#F5FFFF" stopOpacity="1" />
+            <stop offset="40%" stopColor="#B7E7FF" stopOpacity="0.72" />
             <stop offset="100%" stopColor="#001019" stopOpacity="0" />
           </radialGradient>
 
-          {/* НОВЫЙ фильтр для маленькой светящейся точки на конце луча */}
+          {/* мягкое кристаллическое свечение для луча и ореола */}
+          <filter id="enCrystalGlow">
+            <feGaussianBlur stdDeviation="1.4" result="blur" />
+            <feColorMatrix
+              in="blur"
+              type="matrix"
+              values="
+                0 0 0 0 0.78
+                0 0 0 0 0.93
+                0 0 0 0 1
+                0 0 0 0.6 0
+              "
+              result="glowColor"
+            />
+            <feMerge>
+              <feMergeNode in="glowColor" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+
+          {/* маленькая светящаяся точка на конце луча */}
           <filter id="glowDot">
             <feGaussianBlur stdDeviation="1.8" result="coloredBlur" />
             <feMerge>
@@ -48,19 +68,26 @@ const ENFullLogo = ({ className = "flex flex-col items-center gap-2" }) => (
           </filter>
         </defs>
 
-        <circle cx="70" cy="8" r="9" fill="url(#enGlow)" />
-        <line
-          x1="18"
-          y1="30"
-          x2="70"
-          y2="8"
-          stroke="url(#enBeam)"
-          strokeWidth="2"
-          strokeLinecap="round"
-        />
-
-        {/* ⭐ МАЛЕНЬКАЯ СВЕТЯЩАЯСЯ ТОЧКА НА КОНЦЕ ЛУЧА */}
-        <circle cx="70" cy="8" r="2.2" fill="#EFFFFF" filter="url(#glowDot)" />
+        <g filter="url(#enCrystalGlow)">
+          <circle cx="70" cy="8" r="9" fill="url(#enGlow)" />
+          <line
+            x1="18"
+            y1="30"
+            x2="70"
+            y2="8"
+            stroke="url(#enBeam)"
+            strokeWidth="2"
+            strokeLinecap="round"
+          />
+          {/* ⭐ маленькая кристаллическая точка на конце луча */}
+          <circle
+            cx="70"
+            cy="8"
+            r="2.2"
+            fill="#F8FFFF"
+            filter="url(#glowDot)"
+          />
+        </g>
       </svg>
 
       <div className="en-logo-text leading-tight">
@@ -70,10 +97,6 @@ const ENFullLogo = ({ className = "flex flex-col items-center gap-2" }) => (
     </div>
   </div>
 );
-
-
-
-
 
 
 
@@ -696,9 +719,6 @@ const categoryLabel = categoryOfArticle ? categoryOfArticle.replace(/-/g, " ").t
 </div>
 );
 }
-
-
-
 
 
   /* =========================
