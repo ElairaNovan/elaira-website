@@ -17,60 +17,59 @@ const inlineImages = {
 /* ===== ПОЛНЫЙ ЛОГОТИП (Elaira Novan) ===== */
 const ENFullLogo = ({ className = "flex flex-col items-center gap-2" }) => (
   <div className={className}>
-    <div className="relative flex items-center gap-[0.35rem] md:gap-2">
+    <div className="relative flex items-center gap-[0.2rem] md:gap-[0.3rem]">
       {/* Луч сознания */}
       <svg
-        viewBox="0 0 100 40"
-        className="w-[86px] md:w-[100px] translate-y-[1px] select-none pointer-events-none"
+        viewBox="0 0 80 32"
+        className="w-[74px] md:w-[86px] translate-y-[1px] select-none pointer-events-none"
         aria-label="Elaira Novan light logo"
       >
         <defs>
-          {/* Градиент вдоль палки: от более мягкого начала к яркому концу у N */}
-          <linearGradient id="enBeam" x1="0%" y1="25%" x2="100%" y2="75%">
-            {/* начало – чуть выше E, без свечения */}
+          {/* Градиент вдоль палки */}
+          <linearGradient id="enBeam" x1="0%" y1="20%" x2="100%" y2="80%">
+            {/* начало – мягкое, без свечения */}
             <stop offset="0%" stopColor="#DDEFFF" stopOpacity="0.5" />
             {/* середина – уровень середины E */}
-            <stop offset="50%" stopColor="#C5E6FF" stopOpacity="0.9" />
-            {/* конец – у N, ярче всего */}
+            <stop offset="55%" stopColor="#C5E6FF" stopOpacity="0.9" />
+            {/* конец – у N, самый яркий */}
             <stop offset="100%" stopColor="#7FD4FF" stopOpacity="1" />
           </linearGradient>
 
-          {/* Мягкое свечение в конце палки — у буквы N */}
-          <radialGradient id="enBeamGlow" cx="100%" cy="75%" r="45%">
+          {/* Свечение только в конце палки — у N */}
+          <radialGradient id="enBeamGlow" cx="100%" cy="75%" r="50%">
             <stop offset="0%" stopColor="#F2FFFF" stopOpacity="0.95" />
             <stop offset="40%" stopColor="#A7E4FF" stopOpacity="0.55" />
             <stop offset="100%" stopColor="#001018" stopOpacity="0" />
           </radialGradient>
         </defs>
 
-        {/* Свечение-«комета» строго в области конца палки (зона N) */}
-        <circle cx="70" cy="24" r="9" fill="url(#enBeamGlow)" />
+        {/* Свечение в конце (область N) */}
+        <circle cx="70" cy="20" r="8" fill="url(#enBeamGlow)" />
 
         {/* ПАЛКА
-           x1,y1 — начало: чуть выше E, ближе к тексту
-           середина отрезка ~ на уровне центра E
-           x2,y2 — конец: у N, в зоне свечения
+           x1,y1 — НАЧАЛО: чуть выше E, уже рядом с текстом (правее)
+           середина ~ на уровне середины E
+           x2,y2 — КОНЕЦ: у N + свечение
         */}
         <line
-          x1="22"  // начало – выше E, чуть левее текста
-          y1="12"
-          x2="70"  // конец – в зоне N
-          y2="24"
+          x1="46"   // начало — выше E и почти у текста
+          y1="8"
+          x2="70"   // конец — в зоне N
+          y2="20"
           stroke="url(#enBeam)"
-          strokeWidth="2.2"   // палка тоньше, как ты хотела
+          strokeWidth="2"
           strokeLinecap="round"
         />
       </svg>
 
-      {/* Название бренда вплотную к лучу */}
-      <div className="en-logo-text leading-tight">
+      {/* Название бренда максимально близко к лучу */}
+      <div className="en-logo-text leading-tight ml-[-0.4rem] md:ml-[-0.5rem]">
         <span className="en-logo-main">ELAIRA</span>
         <span className="en-logo-sub">NOVAN</span>
       </div>
     </div>
   </div>
 );
-
 
 
 
