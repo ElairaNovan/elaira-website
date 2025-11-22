@@ -17,48 +17,50 @@ const inlineImages = {
 /* ===== ПОЛНЫЙ ЛОГОТИП (Elaira Novan) ===== */
 const ENFullLogo = ({ className = "flex flex-col items-center gap-2" }) => (
   <div className={className}>
-    <div className="relative flex items-center gap-[0.3rem] md:gap-[0.35rem]">
-
-      {/* ───────── ЛУЧ ───────── */}
+    <div className="relative flex items-center gap-2 md:gap-3">
+      {/* Луч света */}
       <svg
-        width="52"
-        height="32"
-        viewBox="0 0 40 25"
-        className="select-none pointer-events-none translate-y-[1px]"
+        viewBox="0 0 120 40"
+        className="w-[80px] md:w-[96px] -mr-1 select-none pointer-events-none"
+        aria-label="Elaira Novan light logo"
       >
         <defs>
-          <linearGradient id="beamStroke" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#C8E7FF" stopOpacity="0.45" />
-            <stop offset="60%" stopColor="#A7E4FF" stopOpacity="0.85" />
-            <stop offset="100%" stopColor="#7FD4FF" stopOpacity="1" />
+          {/* Градиент для линии: слева мягче, справа у текста ярче */}
+          <linearGradient id="enBeam" x1="0%" y1="100%" x2="100%" y2="0%">
+            {/* ХВост слева — менее яркий */}
+            <stop offset="0%" stopColor="#6CCBFF" stopOpacity="0.45" />
+            <stop offset="45%" stopColor="#BDE7FF" stopOpacity="0.85" />
+            {/* Голова у N — самая яркая */}
+            <stop offset="100%" stopColor="#EFFFFF" stopOpacity="1" />
           </linearGradient>
 
-          <radialGradient id="beamGlow" cx="100%" cy="70%" r="55%">
+          {/* Мягкое сияние в КОНЦЕ луча (у N) */}
+          <radialGradient id="enGlow" cx="100%" cy="0%" r="40%">
             <stop offset="0%" stopColor="#EFFFFF" stopOpacity="0.9" />
-            <stop offset="40%" stopColor="#A8E5FF" stopOpacity="0.55" />
-            <stop offset="100%" stopColor="#001018" stopOpacity="0" />
+            <stop offset="40%" stopColor="#9EDFFF" stopOpacity="0.5" />
+            <stop offset="100%" stopColor="#001019" stopOpacity="0" />
           </radialGradient>
         </defs>
 
-        {/* Свечение в конце — у буквы N */}
-        <circle cx="34" cy="16" r="7" fill="url(#beamGlow)" />
+        {/* Сияние ТЕПЕРЬ в конце, рядом с NOVAN */}
+        <circle cx="70" cy="8" r="9" fill="url(#enGlow)" />
 
-        {/* Луч */}
+        {/* Сам луч — та же геометрия, только тоньше */}
         <line
-          x1="8"   // начало: ближе к тексту и чуть выше E
-          y1="6"
-          x2="34"  // конец у N
-          y2="16"
-          stroke="url(#beamStroke)"
-          strokeWidth="2"
+          x1="18"  // хвост слева
+          y1="30"
+          x2="70"  // голова у NOVAN
+          y2="8"
+          stroke="url(#enBeam)"
+          strokeWidth="2"   // палка чуть тоньше
           strokeLinecap="round"
         />
       </svg>
 
-      {/* ───────── ТЕКСТ ───────── */}
-      <div className="leading-tight">
-        <span className="block en-logo-main">ELAIRA</span>
-        <span className="block en-logo-sub">NOVAN</span>
+      {/* Подпись бренда рядом */}
+      <div className="en-logo-text leading-tight">
+        <span className="en-logo-main">ELAIRA</span>
+        <span className="en-logo-sub">NOVAN</span>
       </div>
     </div>
   </div>
