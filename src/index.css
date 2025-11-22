@@ -950,3 +950,13 @@ main > section.site-frame:first-of-type h1 {
     padding: 3.2rem 4rem 3.8rem;
   }
 }
+/* === ABOUT HERO — премиальная типографика текста на плакате === */
+.about-hero-copy p {
+  font-family: 'Corbel Light', sans-serif;
+  font-weight: 300;                          /* лёгкий тонкий шрифт */
+  font-size: 1.06rem;                        /* чуть меньше для воздушности */
+  line-height: 1.85;                         /* воздушное дыхание */
+  letter-spacing: 0.01em;
+  color: rgba(218, 240, 255, 0.92);          /* мягкий премиум-ледяной оттенок */
+  text-rendering: optimizeLegibility;
+}
