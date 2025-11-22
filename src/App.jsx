@@ -15,43 +15,35 @@ const inlineImages = {
  
 
 /* ===== ПОЛНЫЙ ЛОГОТИП (Elaira Novan) ===== */
-ENFullLogo = ({ className = "flex flex-col items-center gap-2" }) => (
+const ENFullLogo = ({ className = "flex flex-col items-center gap-2" }) => (
   <div className={className}>
     <div className="relative flex items-center gap-3">
-      {/* Световой символ EN */}
+      {/* Световой штрих */}
       <svg
         viewBox="0 0 40 40"
         className="h-9 md:h-10 select-none pointer-events-none"
         aria-label="Elaira Novan symbol"
       >
         <defs>
-          <linearGradient id="enMonoStroke" x1="0%" y1="0%" x2="100%" y2="100%">
+          <linearGradient id="enMonoStroke" x1="0%" y1="0%" x2="0%" y2="100%">
             <stop offset="0%" stopColor="#E4F9FF" stopOpacity="0.95" />
             <stop offset="40%" stopColor="#C7ECFF" stopOpacity="1" />
-            <stop offset="100%" stopColor="#7FD4FF" stopOpacity="0.9" />
+            <stop offset="100%" stopColor="#7FD4FF" stopOpacity="0.4" />
           </linearGradient>
         </defs>
 
         <g
           stroke="url(#enMonoStroke)"
-          strokeWidth="1.6"
+          strokeWidth="1.5"
           strokeLinecap="round"
-          strokeLinejoin="round"
           fill="none"
         >
-          {/* Левая грань (E / портал) */}
-          <path d="M8 6 L8 34" />
-          <path d="M8 10 L16 10" />
-          <path d="M8 20 L14 20" />
-          <path d="M8 30 L16 30" />
-
-          {/* Правая грань (N / световой каркас) */}
-          <path d="M24 6 L24 34" />
-          <path d="M8 8 L24 32" /> {/* диагональ, связывающая E и N */}
+          {/* Минималистичный световой штрих */}
+          <line x1="10" y1="8" x2="10" y2="32" />
         </g>
       </svg>
 
-      {/* Подпись бренда рядом, не главная, а как «лейбл» */}
+      {/* Подпись бренда рядом */}
       <div className="en-logo-text leading-tight">
         <span className="en-logo-main">ELAIRA</span>
         <span className="en-logo-sub">NOVAN</span>
