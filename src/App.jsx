@@ -36,6 +36,15 @@ const ENFullLogo = ({ className = "flex flex-col items-center gap-2" }) => (
             <stop offset="40%" stopColor="#9EDFFF" stopOpacity="0.5" />
             <stop offset="100%" stopColor="#001019" stopOpacity="0" />
           </radialGradient>
+
+          {/* НОВЫЙ фильтр для маленькой светящейся точки на конце луча */}
+          <filter id="glowDot">
+            <feGaussianBlur stdDeviation="1.8" result="coloredBlur" />
+            <feMerge>
+              <feMergeNode in="coloredBlur" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
         </defs>
 
         <circle cx="70" cy="8" r="9" fill="url(#enGlow)" />
@@ -49,6 +58,9 @@ const ENFullLogo = ({ className = "flex flex-col items-center gap-2" }) => (
           strokeWidth="2"
           strokeLinecap="round"
         />
+
+        {/* ⭐ МАЛЕНЬКАЯ СВЕТЯЩАЯСЯ ТОЧКА НА КОНЦЕ ЛУЧА */}
+        <circle cx="70" cy="8" r="2.2" fill="#EFFFFF" filter="url(#glowDot)" />
       </svg>
 
       <div className="en-logo-text leading-tight">
