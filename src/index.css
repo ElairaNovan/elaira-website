@@ -960,10 +960,15 @@ main > section.site-frame:first-of-type h1 {
 .about-hero-copy {
   position: relative;
   z-index: 2;
-  max-width: 780px;
-  margin-left: auto;
 
-  padding: 2.4rem 1.75rem 2.8rem;
+  /* центральная колонка */
+  max-width: 900px;
+  margin: 0 auto;
+
+  /* симметричные отступы слева/справа,
+     чтобы текст начинался и заканчивался
+     с одинаковой дистанцией от краёв плаката */
+  padding: 2.6rem 2.4rem 3rem;
 }
 
 @media (min-width: 768px) {
@@ -972,8 +977,8 @@ main > section.site-frame:first-of-type h1 {
   }
 
   .about-hero-copy {
-    padding: 3rem 3rem 3.4rem;
-    max-width: 800px;
+    max-width: 960px;
+    padding: 3.1rem 3rem 3.4rem;
   }
 }
 
@@ -983,9 +988,12 @@ main > section.site-frame:first-of-type h1 {
   }
 
   .about-hero-copy {
-    padding: 3.2rem 4rem 3.8rem;
+    padding: 3.3rem 3.6rem 3.7rem;
   }
 }
+
+
+
 /* === ABOUT HERO — премиальная типографика текста на плакате === */
 .about-hero-copy p {
   font-family: 'Corbel Light', sans-serif;

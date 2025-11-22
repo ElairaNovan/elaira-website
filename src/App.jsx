@@ -1017,15 +1017,16 @@ const categoryLabel = categoryOfArticle ? categoryOfArticle.replace(/-/g, " ").t
 
       {/* Текст поверх */}
       <div
-        id="hero-right"
-        className="
-          about-hero-copy
-          relative z-10
-          w-full md:w-[60%] lg:w-[55%]
-          ml-auto
-          flex flex-col justify-center
-        "
-      >
+        
+  id="hero-right"
+  className="
+    about-hero-copy
+    relative z-10
+    w-full
+    flex flex-col justify-center
+  "
+>
+ 
         {/* Маленький капс-интро */}
         <p
           className="
