@@ -18,24 +18,42 @@ const inlineImages = {
 const ENFullLogo = ({ className = "flex flex-col items-center gap-2" }) => (
   <div className={className}>
     <div className="relative flex items-center justify-center">
-      <img
-        src={brandLogo}
-        alt="Elaira Novan — Conscious Intelligence Mark"
-        className="w-[160px] md:w-[180px] select-none pointer-events-none"
-        style={{
-          display: "block",
-          filter: "drop-shadow(0 0 25px rgba(0, 223, 255, 0.6))",
-          borderRadius: "12px",
-          background: "transparent",
-          boxShadow: "0 0 60px 20px rgba(0, 223, 255, 0.1)",
-          mixBlendMode: "screen",
-          maskImage: "radial-gradient(circle, black 60%, transparent 100%)",
-          // WebkitMaskImage: "radial-gradient(circle, black 60%, transparent 100%)",
-        }}
-      />
+      <svg
+        viewBox="0 0 120 40"
+        className="w-[150px] md:w-[170px] select-none pointer-events-none"
+        aria-label="Elaira Novan logo"
+      >
+        <defs>
+          <linearGradient id="enStroke" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#E4F9FF" stopOpacity="0.9" />
+            <stop offset="50%" stopColor="#BEE7FF" stopOpacity="0.95" />
+            <stop offset="100%" stopColor="#7FD4FF" stopOpacity="0.9" />
+          </linearGradient>
+        </defs>
+
+        <g
+          stroke="url(#enStroke)"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          fill="none"
+        >
+          {/* E — архитектурная, с лёгкими зазорами */}
+          <path d="M10 6 L10 34" />
+          <path d="M10 8 L34 8" />
+          <path d="M10 20 L28 20" />
+          <path d="M10 32 L34 32" />
+
+          {/* N — световой «каркас» */}
+          <path d="M52 34 L52 6" />
+          <path d="M52 6 L86 34" />
+          <path d="M86 34 L86 6" />
+        </g>
+      </svg>
     </div>
   </div>
 );
+
 
 /* ===== ДАННЫЕ ===== */
 // стало:
