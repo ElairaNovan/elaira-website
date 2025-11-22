@@ -787,9 +787,10 @@ const categoryLabel = categoryOfArticle ? categoryOfArticle.replace(/-/g, " ").t
   className="
     w-full grid grid-cols-2 gap-4 mt-3
     md:w-auto md:mt-0 md:flex md:flex-row md:gap-5
-    md:ml-auto
+    md:ml-auto md:pr-4
   "
 >
+
 
 
     <a
