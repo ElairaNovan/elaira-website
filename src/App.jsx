@@ -760,39 +760,34 @@ const categoryLabel = categoryOfArticle ? categoryOfArticle.replace(/-/g, " ").t
     paddingBottom: "1.5rem",
   }}
 >
-
-
-       <div
-  className="
-    flex flex-col items-center gap-2
-    w-full
-    max-w-[1400px]
-    mx-auto
-    px-6
-    pt-4
-    md:flex-row md:items-start md:justify-between md:gap-3 md:pt-8
-  "
->
-
-
-
-  {/* логотип */}
-  <ENFullLogo
+  <div
     className="
-      flex flex-col items-center gap-2        /* MOBILE: центр */
-      md:items-start md:gap-2 md:-ml-2        /* DESKTOP: как раньше слева */
+      flex flex-col items-center gap-2
+      w-full
+      max-w-[1500px]
+      mx-auto
+      pl-6 pr-2
+      pt-4
+      md:flex-row md:items-start md:gap-3 md:pt-8
     "
-  />
+  >
+    {/* логотип */}
+    <ENFullLogo
+      className="
+        flex flex-col items-center gap-2
+        md:items-start md:gap-2 md:-ml-2
+      "
+    />
 
-  {/* меню */}
- <nav
-  aria-label="Primary"
-  className="
-    w-full grid grid-cols-2 gap-4 mt-3
-    md:w-auto md:mt-0 md:flex md:flex-row md:gap-5
-    md:ml-auto
-  "
->
+    {/* меню */}
+    <nav
+      aria-label="Primary"
+      className="
+        w-full grid grid-cols-2 gap-4 mt-3
+        md:w-auto md:mt-0 md:flex md:flex-row md:gap-5
+        md:ml-auto
+      "
+    >
 
 
 
@@ -843,8 +838,6 @@ const categoryLabel = categoryOfArticle ? categoryOfArticle.replace(/-/g, " ").t
 
   </nav>
 </div>
-
-
 
       </header>
 
