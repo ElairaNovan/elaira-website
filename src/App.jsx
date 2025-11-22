@@ -17,7 +17,7 @@ const inlineImages = {
 /* ===== ПОЛНЫЙ ЛОГОТИП (Elaira Novan) ===== */
 const ENFullLogo = ({ className = "flex flex-col items-center gap-2" }) => (
   <div className={className}>
-    <div className="relative flex items-center gap-1 md:gap-1.5">
+    <div className="relative flex items-center gap-0.5 md:gap-1">
       {/* Луч света */}
       <svg
         viewBox="0 0 120 40"
@@ -25,14 +25,12 @@ const ENFullLogo = ({ className = "flex flex-col items-center gap-2" }) => (
         aria-label="Elaira Novan light logo"
       >
         <defs>
-          {/* Градиент для линии: слева мягче, справа у текста ярче */}
           <linearGradient id="enBeam" x1="0%" y1="100%" x2="100%" y2="0%">
             <stop offset="0%" stopColor="#6CCBFF" stopOpacity="0.45" />
             <stop offset="45%" stopColor="#BDE7FF" stopOpacity="0.85" />
             <stop offset="100%" stopColor="#EFFFFF" stopOpacity="1" />
           </linearGradient>
 
-          {/* Мягкое сияние в конце луча */}
           <radialGradient id="enGlow" cx="100%" cy="0%" r="40%">
             <stop offset="0%" stopColor="#EFFFFF" stopOpacity="0.9" />
             <stop offset="40%" stopColor="#9EDFFF" stopOpacity="0.5" />
@@ -40,10 +38,8 @@ const ENFullLogo = ({ className = "flex flex-col items-center gap-2" }) => (
           </radialGradient>
         </defs>
 
-        {/* Сияние у NOVAN */}
         <circle cx="70" cy="8" r="9" fill="url(#enGlow)" />
 
-        {/* Луч */}
         <line
           x1="18"
           y1="30"
@@ -55,7 +51,6 @@ const ENFullLogo = ({ className = "flex flex-col items-center gap-2" }) => (
         />
       </svg>
 
-      {/* Текст логотипа */}
       <div className="en-logo-text leading-tight">
         <span className="en-logo-main">ELAIRA</span>
         <span className="en-logo-sub">NOVAN</span>
