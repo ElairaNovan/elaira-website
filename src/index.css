@@ -961,58 +961,39 @@ main > section.site-frame:first-of-type h1 {
   text-rendering: optimizeLegibility;
 }
 /* =============================
-   ELAIRA NOVAN – wordmark logo
+   Новый логотип: символ EN + подпись
    ============================= */
 
-.en-wordmark {
+.en-logo-text {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 0.12rem;
-
-  /* это задаёт общую "премиальную" тональность */
-  font-family: "Corbel Light", system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  gap: 0.08rem;
 }
 
-/* верхняя строка — ELAIRA */
-.en-wordmark-main {
-  font-size: 1.15rem;
-  letter-spacing: 0.34em;
-  text-transform: uppercase;
-
-  background: linear-gradient(
-    90deg,
-    #f7fcff,
-    #d9f2ff,
-    #9fdcff
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-
-  text-shadow:
-    0 0 12px rgba(142, 214, 255, 0.45),
-    0 0 26px rgba(40, 130, 200, 0.45);
-}
-
-/* нижняя строка — NOVAN, более спокойная */
-.en-wordmark-sub {
-  font-size: 0.68rem;
+.en-logo-main {
+  font-size: 0.78rem;
   letter-spacing: 0.32em;
   text-transform: uppercase;
-  color: rgba(187, 215, 245, 0.85);
+  color: #e6f4ff;
+  opacity: 0.9;
 }
 
-/* чуть поджимаем логотип на мобильных, чтобы не упирался */
+.en-logo-sub {
+  font-size: 0.62rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(170, 206, 235, 0.85);
+}
+
+/* чуть уменьшаем логотип на очень узких экранах */
 @media (max-width: 480px) {
-  .en-wordmark-main {
-    font-size: 1rem;
-    letter-spacing: 0.28em;
+  .en-logo-main {
+    font-size: 0.7rem;
+    letter-spacing: 0.26em;
   }
 
-  .en-wordmark-sub {
-    font-size: 0.64rem;
-    letter-spacing: 0.26em;
+  .en-logo-sub {
+    font-size: 0.58rem;
+    letter-spacing: 0.22em;
   }
 }
