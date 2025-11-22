@@ -20,8 +20,8 @@ const ENFullLogo = ({ className = "flex flex-col items-center gap-2" }) => (
     <div className="relative flex items-center gap-3">
       {/* Световой штрих */}
       <svg
-  width="44"
-  height="44"
+  width="58"
+  height="58"
   viewBox="0 0 44 44"
   className="select-none pointer-events-none"
   aria-label="Elaira Novan symbol"
@@ -44,6 +44,7 @@ const ENFullLogo = ({ className = "flex flex-col items-center gap-2" }) => (
     strokeLinecap="round"
   />
 </svg>
+
 
       {/* Подпись бренда рядом */}
       <div className="en-logo-text leading-tight">
