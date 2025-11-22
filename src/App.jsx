@@ -17,34 +17,45 @@ const inlineImages = {
 /* ===== ПОЛНЫЙ ЛОГОТИП (Elaira Novan) ===== */
 const ENFullLogo = ({ className = "flex flex-col items-center gap-2" }) => (
   <div className={className}>
-    <div className="relative flex items-center gap-3">
-      {/* Световой штрих */}
+    <div className="relative flex items-center gap-2 md:gap-3">
+      {/* Луч света */}
       <svg
-  width="58"
-  height="58"
-  viewBox="0 0 44 44"
-  className="select-none pointer-events-none"
-  aria-label="Elaira Novan symbol"
->
-  <defs>
-    <linearGradient id="enStroke" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stopColor="#E8F9FF" stopOpacity="1" />
-      <stop offset="50%" stopColor="#A6E0FF" stopOpacity="1" />
-      <stop offset="100%" stopColor="#6CCBFF" stopOpacity="0.9" />
-    </linearGradient>
-  </defs>
+        viewBox="0 0 120 40"
+        className="w-[80px] md:w-[96px] -mr-1 select-none pointer-events-none"
+        aria-label="Elaira Novan light logo"
+      >
+        <defs>
+          {/* Градиент для линии */}
+          <linearGradient id="enBeam" x1="0%" y1="100%" x2="100%" y2="0%">
+            {/* яркий старт около E */}
+            <stop offset="0%" stopColor="#EFFFFF" stopOpacity="1" />
+            <stop offset="45%" stopColor="#BDE7FF" stopOpacity="0.95" />
+            {/* лёгкое затухание к N */}
+            <stop offset="100%" stopColor="#6CCBFF" stopOpacity="0.5" />
+          </linearGradient>
 
-  <line
-    x1="10"
-    y1="34"
-    x2="34"
-    y2="10"
-    stroke="url(#enStroke)"
-    strokeWidth="2.6"
-    strokeLinecap="round"
-  />
-</svg>
+          {/* Мягкое сияние на ярком конце луча */}
+          <radialGradient id="enGlow" cx="0%" cy="100%" r="40%">
+            <stop offset="0%" stopColor="#EFFFFF" stopOpacity="0.9" />
+            <stop offset="40%" stopColor="#9EDFFF" stopOpacity="0.5" />
+            <stop offset="100%" stopColor="#001019" stopOpacity="0" />
+          </radialGradient>
+        </defs>
 
+        {/* Сияние в начале (у «истока» луча) */}
+        <circle cx="18" cy="30" r="10" fill="url(#enGlow)" />
+
+        {/* Сам луч — середина примерно в зоне E, конец тянется к N */}
+        <line
+          x1="18"  // яркая точка слева внизу
+          y1="30"
+          x2="70"  // конец ближе к тексту NOVAN
+          y2="8"
+          stroke="url(#enBeam)"
+          strokeWidth="3"
+          strokeLinecap="round"
+        />
+      </svg>
 
       {/* Подпись бренда рядом */}
       <div className="en-logo-text leading-tight">
