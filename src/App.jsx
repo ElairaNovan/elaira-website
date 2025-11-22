@@ -31,24 +31,23 @@ const ENFullLogo = ({ className = "flex flex-col items-center gap-2" }) => (
           </linearGradient>
         </defs>
 
-        <g
+       <g
   stroke="url(#enStroke)"
-  strokeWidth="2"
+  strokeWidth="1.7"
   strokeLinecap="round"
   strokeLinejoin="round"
   fill="none"
 >
-  {/* E с зазорами — больше воздуха */}
-  <path d="M12 6 L12 34" />
-  <path d="M12 8 L30 8" />
-  <path d="M12 20 L26 20" />
-  <path d="M12 32 L30 32" />
+  {/* E — только верх и низ + намёк на середину */}
+  <path d="M14 8 L32 8" />
+  <path d="M14 32 L32 32" />
+  <path d="M14 8 L14 32" />
+  <path d="M14 20 L24 20" />
 
-  {/* N — с небольшим разрывом по центру диагонали */}
-  <path d="M50 34 L50 6" />
-  <path d="M50 6 L68 22" />
-  <path d="M72 26 L88 34" />
-  <path d="M88 34 L88 6" />
+  {/* N — чуть более узкая и высокая */}
+  <path d="M54 32 L54 8" />
+  <path d="M54 8 L80 32" />
+  <path d="M80 32 L80 8" />
 </g>
 
       </svg>
