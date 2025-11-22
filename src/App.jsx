@@ -32,23 +32,25 @@ const ENFullLogo = ({ className = "flex flex-col items-center gap-2" }) => (
         </defs>
 
         <g
-          stroke="url(#enStroke)"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          fill="none"
-        >
-          {/* E — архитектурная, с лёгкими зазорами */}
-          <path d="M10 6 L10 34" />
-          <path d="M10 8 L34 8" />
-          <path d="M10 20 L28 20" />
-          <path d="M10 32 L34 32" />
+  stroke="url(#enStroke)"
+  strokeWidth="2"
+  strokeLinecap="round"
+  strokeLinejoin="round"
+  fill="none"
+>
+  {/* E с зазорами — больше воздуха */}
+  <path d="M12 6 L12 34" />
+  <path d="M12 8 L30 8" />
+  <path d="M12 20 L26 20" />
+  <path d="M12 32 L30 32" />
 
-          {/* N — световой «каркас» */}
-          <path d="M52 34 L52 6" />
-          <path d="M52 6 L86 34" />
-          <path d="M86 34 L86 6" />
-        </g>
+  {/* N — с небольшим разрывом по центру диагонали */}
+  <path d="M50 34 L50 6" />
+  <path d="M50 6 L68 22" />
+  <path d="M72 26 L88 34" />
+  <path d="M88 34 L88 6" />
+</g>
+
       </svg>
     </div>
   </div>
