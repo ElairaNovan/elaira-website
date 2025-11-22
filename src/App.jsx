@@ -20,28 +20,30 @@ const ENFullLogo = ({ className = "flex flex-col items-center gap-2" }) => (
     <div className="relative flex items-center gap-3">
       {/* Световой штрих */}
       <svg
-        viewBox="0 0 40 40"
-        className="h-9 md:h-10 select-none pointer-events-none"
-        aria-label="Elaira Novan symbol"
-      >
-        <defs>
-          <linearGradient id="enMonoStroke" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stopColor="#E4F9FF" stopOpacity="0.95" />
-            <stop offset="40%" stopColor="#C7ECFF" stopOpacity="1" />
-            <stop offset="100%" stopColor="#7FD4FF" stopOpacity="0.4" />
-          </linearGradient>
-        </defs>
+  width="44"
+  height="44"
+  viewBox="0 0 44 44"
+  className="select-none pointer-events-none"
+  aria-label="Elaira Novan symbol"
+>
+  <defs>
+    <linearGradient id="enStroke" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#E8F9FF" stopOpacity="1" />
+      <stop offset="50%" stopColor="#A6E0FF" stopOpacity="1" />
+      <stop offset="100%" stopColor="#6CCBFF" stopOpacity="0.9" />
+    </linearGradient>
+  </defs>
 
-        <g
-          stroke="url(#enMonoStroke)"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          fill="none"
-        >
-          {/* Минималистичный световой штрих */}
-          <line x1="10" y1="8" x2="10" y2="32" />
-        </g>
-      </svg>
+  <line
+    x1="10"
+    y1="34"
+    x2="34"
+    y2="10"
+    stroke="url(#enStroke)"
+    strokeWidth="2.6"
+    strokeLinecap="round"
+  />
+</svg>
 
       {/* Подпись бренда рядом */}
       <div className="en-logo-text leading-tight">
