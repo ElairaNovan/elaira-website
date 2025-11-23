@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import aboutPhoto from "./assets/1000022667.jpg";
+import aboutPhoto from "./assets/1000066111.jpg";
 import brandLogo from "./assets/1000022667.jpg"; // твой логотип
 import digitalBloom from "./assets/1000055711.jpg";
 import img1000099277 from "./assets/1000011111.jpg";
