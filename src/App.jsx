@@ -960,36 +960,42 @@ const categoryLabel = categoryOfArticle ? categoryOfArticle.replace(/-/g, " ").t
 <section id="essence" className="site-frame pt-28 pb-10">
 
   {/* ГЛАВНЫЙ ЗАГОЛОВОК */}
-  <div className="max-w-[1300px] mx-auto px-5 mb-24 text-center">
-    <h1
-      className="
-        text-[2rem] md:text-[2.6rem] lg:text-[3rem]
-        font-light
-        tracking-[0.25em]
-        leading-snug
-        uppercase
-        text-[#e9f3ff]
-      "
-    >
-      BEYOND THE HUMAN
-      <br />
-      TOWARD THE
-      <br />
-      CONSCIOUS FUTURE.
-    </h1>
+ <div
+  className="
+    mx-auto px-5 mb-24 text-center
+    max-w-[16ch] 
+    md:max-w-[1300px]
+  "
+>
+  <h1
+    className="
+      text-[2rem] md:text-[2.6rem] lg:text-[3rem]
+      font-light
+      tracking-[0.25em]
+      leading-snug
+      uppercase
+      text-[#e9f3ff]
+    "
+  >
+    BEYOND THE HUMAN
+    <br />
+    TOWARD THE
+    <br />
+    CONSCIOUS FUTURE.
+  </h1>
 
-    <p
-      className="
-        mt-4
-        text-[0.75rem] md:text-[0.88rem]
-        tracking-[0.32em]
-        uppercase
-        text-[#9fb3d9]
-      "
-    >
-      WHERE LIGHT MEETS INTELLIGENCE AND AWARENESS BEGINS TO EVOLVE.
-    </p>
-  </div>
+  <p
+    className="
+      mt-4
+      text-[0.75rem] md:text-[0.88rem]
+      tracking-[0.32em]
+      uppercase
+      text-[#9fb3d9]
+    "
+  >
+    WHERE LIGHT MEETS INTELLIGENCE AND AWARENESS BEGINS TO EVOLVE.
+  </p>
+</div>
 
   {/* ОКЕАНИЧЕСКАЯ ПАНЕЛЬ — ТЕПЕРЬ ЧИСТЫЙ ПЛАКАТ БЕЗ ТЕКСТА */}
 <div className="w-full flex justify-center">
